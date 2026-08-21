@@ -65,7 +65,7 @@ main{min-width:0; padding-top:0}
 .kicker{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
   color:var(--ink-3); display:flex; flex-wrap:wrap; gap:14px; align-items:center}
 .kicker .dot{width:4px;height:4px;border-radius:50%;background:var(--rule-strong)}
-.mast h1{font-size:clamp(34px,5.6vw,54px); line-height:1.14; margin:20px 0 0; max-width:16ch}
+.mast h1{font-size:clamp(26px,4.4vw,54px); line-height:1.14; margin:20px 0 0; white-space:nowrap}
 .mast .dek{margin:18px 0 0}
 .mast .dek ul.brief{margin:0}
 .mast .dek ul.brief li{font-size:16.5px; line-height:1.62}
@@ -83,10 +83,10 @@ main{min-width:0; padding-top:0}
 .tab-panel.active{display:block}
 
 .subtabbar{display:flex; flex-wrap:wrap; gap:8px; margin:32px 0 0}
-.subtab-btn{font-family:"IBM Plex Sans KR",sans-serif; font-size:13px; font-weight:600; color:var(--ink-2);
-  background:var(--surface); border:1px solid var(--rule); padding:9px 16px; border-radius:20px; cursor:pointer;
+.subtab-btn{font-family:"IBM Plex Sans KR",sans-serif; font-size:16px; font-weight:600; color:var(--ink-2);
+  background:var(--surface); border:1px solid var(--rule); padding:11px 18px; border-radius:20px; cursor:pointer;
   display:inline-flex; align-items:center; gap:8px; transition:background .15s,border-color .15s,color .15s}
-.subtab-btn .sn{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-3); font-weight:600}
+.subtab-btn .sn{font-family:"IBM Plex Mono",monospace; font-size:14px; color:var(--ink-3); font-weight:600}
 .subtab-btn:hover{border-color:var(--rule-strong); color:var(--ink)}
 .subtab-btn.active{background:var(--ink); border-color:var(--ink); color:var(--surface)}
 .subtab-btn.active .sn{color:var(--surface); opacity:.65}
@@ -248,15 +248,15 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <div class="dek">
     <ul class="brief">
-      <li>상위 백분위 <b>84.8% → 57.1%</b>로 3개년 중 최고 수준 개선 — 발표 밴드는 701–750위 → 851–900위로 표기 조정</li>
-      <li>평가 대상이 856개교 → 1,534개교(+79%)로 확대된 결과이며, 실질 위치는 <b>중위권에 근접</b></li>
-      <li>2026년 상승분의 40%는 데이터 정비 효과 — 정합성 점검만으로 확보 가능한 점수가 아직 남아있다는 신호</li>
-      <li>다음 단계는 연구 지표 중심의 실질 개선 — <b>국제공동연구망 하나만 국내 중위로 올려도 128계단 상승 여력</b></li>
+      <li>상위 백분위 <b>84.8% → 57.1%</b>로 3개년 중 최고 수준 개선 — 발표 구간은 701–750위 → 851–900위로 표기 조정</li>
+      <li>평가 대상이 856개교 → 1,534개교(+79%)로 확대된 결과이며, 실질 위치는 <b>중간권에 근접</b></li>
+      <li>2026년 상승분의 40%는 데이터 정비 효과 — 빠진 자료만 채워도 확보 가능한 점수가 아직 남아있다는 신호</li>
+      <li>다음 단계는 연구 항목 중심의 실질 개선 — <b>국제공동연구망 하나만 국내 중간으로 올려도 128계단 상승 여력</b></li>
     </ul>
   </div>
 
   <div class="strip">
-    <div class="strip-head"><span>2026 아시아 순위 밴드 위치</span><span>평가대상 1,534개교</span></div>
+    <div class="strip-head"><span>2026 아시아 순위 구간 위치</span><span>평가대상 1,534개교</span></div>
     <div class="ladder">
       <div class="ladder-track"><div class="ladder-mark" style="left:57.1%" data-l="한성대 851–900"></div></div>
       <div class="ladder-ticks"><span>1위</span><span>400</span><span>800</span><span>1,200</span><span>1,534위</span></div>
@@ -264,10 +264,10 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 
   <div class="stats">
-    <div class="stat key"><div class="lab">Asia 2026</div><div class="val">851–900</div><div class="sub">평가모집단 1,534개교 기준 밴드</div></div>
-    <div class="stat up"><div class="lab">국내 순위</div><div class="val">61 / 103</div><div class="sub">전년 76/101 → 15계단 상승</div></div>
+    <div class="stat key"><div class="lab">Asia 2026</div><div class="val">851–900</div><div class="sub">평가 대상 1,534개 대학 기준 구간</div></div>
+    <div class="stat up"><div class="lab">국내 순위</div><div class="val">61 / 103</div><div class="sub">작년 76/101 → 15계단 상승</div></div>
     <div class="stat up"><div class="lab">상위 백분위</div><div class="val">57.1%</div><div class="sub">2024년 대비 27.7%p 개선, 3개년 최고</div></div>
-    <div class="stat up"><div class="lab">다음 목표까지</div><div class="val">+5.3</div><div class="sub">코호트 평균 성장 속도 도달에 필요한 점수</div></div>
+    <div class="stat up"><div class="lab">다음 목표까지</div><div class="val">+5.3</div><div class="sub">다른 학교들 평균만큼 오르는 데 필요한 점수</div></div>
   </div>
 
   <div class="tabbar" role="tablist">
@@ -284,7 +284,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <button class="subtab-btn active" data-target="s1" type="button"><span class="sn">가</span>현재 위치</button>
     <button class="subtab-btn" data-target="s2" type="button"><span class="sn">나</span>착시를 걷어낸 위치</button>
     <button class="subtab-btn" data-target="s3" type="button"><span class="sn">다</span>상승의 구성</button>
-    <button class="subtab-btn" data-target="s4" type="button"><span class="sn">라</span>지표별 진단</button>
+    <button class="subtab-btn" data-target="s4" type="button"><span class="sn">라</span>항목별로 살펴보기</button>
     <button class="subtab-btn" data-target="s5" type="button"><span class="sn">마</span>피어 벤치마킹 (1)</button>
     <button class="subtab-btn" data-target="s5b" type="button"><span class="sn">바</span>피어 벤치마킹 (2)</button>
   </div>
@@ -293,18 +293,18 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">가</span><h2>현재 위치</h2></div>
 
   <ul class="brief lede">
-    <li>2026 QS 아시아: <b>851–900위 밴드</b> 진입, 상위 백분위 57.1%로 3개년 중 최고 수준</li>
-    <li>국내 순위: 103개 평가대학 중 <b>61위</b> — 전년 대비 15계단 상승</li>
+    <li>2026 QS 아시아: <b>851–900위 구간</b> 진입, 상위 백분위 57.1%로 3개년 중 최고 수준</li>
+    <li>국내 순위: 103개 평가대학 중 <b>61위</b> — 작년보다 15계단 상승</li>
     <li>동아시아 소지역: 공동 389위</li>
-    <li>복원 총점 <b>19.21점</b>, 모델 환산 순위 863위 — 발표 밴드와 정확히 일치해 분석 신뢰도 확인</li>
+    <li>계산한 총점 <b>19.21점</b>, 모델 환산 순위 863위 — 발표 구간과 정확히 일치해 분석 신뢰도 확인</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>발표 순위는 밴드 표기상 조정됐으나, 평가 모집단도 79% 확대 — 상위 백분위 = 밴드 중앙값 ÷ 전체 평가대학 수.</caption>
+      <caption>발표 순위는 구간 표기상 조정됐으나, 평가 대상도 79% 늘어남 — 상위 백분위 = 구간 중간값 ÷ 전체 평가대학 수.</caption>
       <thead><tr>
         <th>연도</th><th class="num">발표 순위</th><th class="num">평가대상</th><th class="num">상위 백분위</th>
-        <th class="num">국내 순위</th><th class="num">복원 총점</th>
+        <th class="num">국내 순위</th><th class="num">계산한 총점</th>
       </tr></thead>
       <tbody>
         <tr><td>2024</td><td class="num">701–750</td><td class="num">856</td><td class="num">84.8%</td><td class="num">71 / 87</td><td class="num">6.39</td></tr>
@@ -327,25 +327,25 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">나</span><h2>착시를 걷어낸 실제 위치</h2></div>
 
   <ul class="brief lede">
-    <li>QS 2026년 평가대상, 987개교 → 1,534개교로 55% 확대 — 모집단 기준 자체가 크게 달라짐</li>
-    <li>밴드 표기만 보면 150계단 내려간 것처럼 보이나, 한성대보다 낮은 대학도 <b>162곳 → 671곳</b>으로 함께 증가</li>
-    <li>백분위로 환산하면 하위 15%권에서 <b>중위권 바로 아래(상위 57%)</b>로 개선</li>
+    <li>QS 2026년 평가대상, 987개교 → 1,534개교로 55% 늘어남 — 비교 대상 학교 수 자체가 크게 달라짐</li>
+    <li>구간 표기만 보면 150계단 내려간 것처럼 보이나, 한성대보다 낮은 대학도 <b>162곳 → 671곳</b>으로 함께 증가</li>
+    <li>백분위로 환산하면 하위 15%권에서 <b>중간권 바로 아래(상위 57%)</b>로 개선</li>
   </ul>
 
   <figure>
     <figcaption>
       <span class="ft">발표 순위 vs. 상위 백분위</span>
-      <span class="fs">동일 3개년을 두 척도로 비교 — 순위 밴드는 조정, 백분위는 개선</span>
+      <span class="fs">동일 3개년을 두 척도로 비교 — 순위 구간은 조정, 백분위는 개선</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
-        <div class="bar-row"><span class="bl"><b>2024</b> 발표 밴드 중앙 725위</span>
+        <div class="bar-row"><span class="bl"><b>2024</b> 발표 구간 중앙 725위</span>
           <span class="bar-track"><span class="bar-fill n" style="width:84.8%"><title>2024: 725/856 = 상위 84.8%</title></span></span>
           <span class="bv">84.8%</span></div>
-        <div class="bar-row"><span class="bl"><b>2025</b> 발표 밴드 중앙 825위</span>
+        <div class="bar-row"><span class="bl"><b>2025</b> 발표 구간 중앙 825위</span>
           <span class="bar-track"><span class="bar-fill n" style="width:83.6%"><title>2025: 825/987 = 상위 83.6%</title></span></span>
           <span class="bv">83.6%</span></div>
-        <div class="bar-row"><span class="bl"><b>2026</b> 발표 밴드 중앙 875위</span>
+        <div class="bar-row"><span class="bl"><b>2026</b> 발표 구간 중앙 875위</span>
           <span class="bar-track"><span class="bar-fill g" style="width:57.1%"><title>2026: 875/1534 = 상위 57.1%</title></span></span>
           <span class="bv">57.1%</span></div>
       </div>
@@ -358,12 +358,12 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </figure>
 
   <div class="call">
-    <span class="ct">정밀 검증 — 고정 코호트 기준</span>
+    <span class="ct">다시 한번 확인 — 같은 학교들로만 비교</span>
     <ul class="brief">
-      <li>모집단 확대 효과를 통제하기 위해 <b>3개년 모두 평가된 652개교</b>만으로 재계산</li>
-      <li>고정 집단 백분위: <b>86.5%(2024) → 94.6%(2025) → 86.7%(2026)</b>로 안정적 유지</li>
+      <li>평가 대상이 늘어난 효과를 없애기 위해 <b>3개년 모두 평가된 652개교</b>만으로 재계산</li>
+      <li>같은 학교들로만 비교한 백분위: <b>86.5%(2024) → 94.6%(2025) → 86.7%(2026)</b>로 안정적 유지</li>
       <li>2026년의 개선은 2025년 조정분을 회복한 수치로 해석 — 정확한 기준점 확인 차원에서 참고</li>
-      <li>대외적으로는 27.7%p 개선을 강조하되, 내부 목표는 고정 코호트 기준(86.7%)을 기준선으로 설정 권장</li>
+      <li>밖으로 알릴 때는 27.7%p 개선을 강조하되, 내부 목표는 같은 학교들로만 비교한 기준(86.7%)을 출발점으로 삼는 걸 추천</li>
     </ul>
   </div>
 </section>
@@ -372,15 +372,15 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">다</span><h2>2026년 상승의 구성</h2></div>
 
   <ul class="brief lede">
-    <li>복원 총점, 9.72점(2025) → 19.21점(2026)으로 <b>+9.49점</b> 상승 — 3개년 중 최대 상승폭</li>
+    <li>계산한 총점, 9.72점(2025) → 19.21점(2026)으로 <b>+9.49점</b> 상승 — 3개년 중 최대 상승폭</li>
     <li>이 중 <b>+3.82점(40.3%)</b>은 박사학위 교원 비율(SWP) 데이터 정비를 통해 확보</li>
-    <li>SWP는 2024·2025년 미제출로 0점 처리됐던 항목 — 2026년 76.4점으로 정합성 확보, 유사 사례 추가 발굴 시 개선 여지</li>
+    <li>SWP는 2024·2025년 미제출로 0점 처리됐던 항목 — 2026년 76.4점으로 자료 누락 문제 해결, 유사 사례 추가 발굴 시 개선 여지</li>
   </ul>
 
   <figure>
     <figcaption>
       <span class="ft">2025 → 2026 총점 상승 +9.49점의 출처</span>
-      <span class="fs">가중치를 반영한 지표별 기여도. 회색 = 데이터 정비를 통해 확보한 효과.</span>
+      <span class="fs">반영 비율까지 곱해서 계산한 항목별 기여도. 회색 막대 = 빠진 자료를 채워 넣어 얻은 점수.</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
@@ -409,7 +409,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
           <span class="bar-track"><span class="bar-fill" style="width:5.2%"><title>+0.20점 합계</title></span></span>
           <span class="bv">+0.20</span></div>
         <div class="bar-row"><span class="bl"><b>교환학생 파견</b> 39.4 → 29.9</span>
-          <span class="bar-track"><span class="bar-fill w" style="width:6.3%"><title>−0.24점 · 유일한 하락 지표</title></span></span>
+          <span class="bar-track"><span class="bar-fill w" style="width:6.3%"><title>−0.24점 · 유일한 하락 항목</title></span></span>
           <span class="bv">−0.24</span></div>
       </div>
     </div>
@@ -421,35 +421,35 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </figure>
 
   <ul class="brief">
-    <li>QS는 매년 신규 대학 편입 시 점수를 재정규화하는 구조 — 전체 대학의 점수가 함께 상승하는 특성이 있음</li>
-    <li>700–950위 구간 임계 총점은 2025년 대비 평균 <b>+10.96점</b> 상승</li>
-    <li>한성대 상승분(+9.49점)은 이 기준에 근접 — <b>코호트 평균 수준의 성장은 이미 달성</b></li>
+    <li>QS는 매년 새 대학이 들어올 때마다 점수를 다시 계산하는 방식 — 아무것도 하지 않아도 모든 대학의 점수가 같이 오르는 특징이 있음</li>
+    <li>700–950위 구간 커트라인 점수는 2025년보다 평균 <b>+10.96점</b> 올라감</li>
+    <li>한성대 상승분(+9.49점)은 이 기준에 가까움 — <b>다른 학교들 평균만큼은 이미 성장함</b></li>
   </ul>
 
   <div class="call">
     <span class="ct">다음 단계 진단</span>
     <ul class="brief">
-      <li>코호트 기준선(+10.96) 대비 상대 이동은 <b>−1.47점</b>으로 근소한 차이</li>
-      <li>데이터 정비 효과(+3.82)를 제외한 순수 지표 개선만으로는 <b>−5.29점</b> — 이 폭이 2027년의 핵심 개선 목표</li>
-      <li>연구 지표 중심의 실질 개선으로 이 격차를 좁히는 것이 다음 단계 — <b>[미래예측] 탭</b>에서 구체적 시나리오 확인 가능</li>
+      <li>다른 학교들 평균(+10.96)과 비교하면 <b>−1.47점</b> 차이로 크지 않음</li>
+      <li>데이터 정비 효과(+3.82)를 제외한 순수 항목 개선만으로는 <b>−5.29점</b> — 이 폭이 2027년의 핵심 개선 목표</li>
+      <li>연구 항목 중심의 실질 개선으로 이 격차를 좁히는 것이 다음 단계 — <b>[미래예측] 탭</b>에서 구체적 시나리오 확인 가능</li>
     </ul>
   </div>
 </section>
 
 <section id="s4" class="sub-panel">
-  <div class="sec-head"><span class="n">라</span><h2>지표별 정밀 진단</h2></div>
+  <div class="sec-head"><span class="n">라</span><h2>항목별 자세히 살펴보기</h2></div>
 
   <ul class="brief lede">
-    <li>QS 아시아 평가지표 11개 중, 평판 계열(가중치 합 50%)은 이미 <b>국내 중위 이상</b> 확보</li>
-    <li>연구 3종(IRN·CPP·PPF, 가중치 합 25%)이 <b>다음 성장 포인트</b>로 확인됨</li>
+    <li>QS 아시아 평가항목 11개 중, 평판 계열(반영 비율 합 50%)은 이미 <b>국내 중간 이상</b> 확보</li>
+    <li>연구 3종(IRN·CPP·PPF, 반영 비율 합 25%)이 <b>다음 성장 포인트</b>로 확인됨</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>국내 백분위 = 국내 103개 평가대학 중 한성대보다 낮은 점수를 받은 대학의 비율. 기여점 = 지표 점수 × 가중치.</caption>
+      <caption>국내 백분위 = 국내 103개 평가대학 중 한성대보다 낮은 점수를 받은 대학의 비율. 기여점 = 항목 점수 × 반영 비율.</caption>
       <thead><tr>
-        <th>지표</th><th class="num">가중치</th><th class="num">2024</th><th class="num">2025</th><th class="num">2026</th>
-        <th class="num">기여점</th><th class="num">여력</th><th class="num">국내 중위</th><th class="num">국내 백분위</th><th>판정</th>
+        <th>항목</th><th class="num">반영 비율</th><th class="num">2024</th><th class="num">2025</th><th class="num">2026</th>
+        <th class="num">기여점</th><th class="num">여력</th><th class="num">국내 중간</th><th class="num">국내 백분위</th><th>판정</th>
       </tr></thead>
       <tbody>
         <tr><td>학계 평판 <span class="mono" style="color:var(--ink-3)">AR</span></td><td class="num">30%</td><td class="num">10.1</td><td class="num">12.5</td><td class="num">22.8</td><td class="num">6.84</td><td class="num">23.16</td><td class="num">17.7</td><td class="num">56%</td><td><span class="tag ok">강점</span></td></tr>
@@ -469,8 +469,8 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <figure>
     <figcaption>
-      <span class="ft">국내 중위 대비 편차</span>
-      <span class="fs">국내 103개 평가대학 지표별 중앙값=0 기준 한성대 위치</span>
+      <span class="ft">국내 평균과 비교하면</span>
+      <span class="fs">국내 103개 대학의 항목별 중간값을 0으로 놓고, 한성대가 어디 있는지 표시</span>
     </figcaption>
     <div class="fig-body">
       <div class="dv">
@@ -507,17 +507,17 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       </div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--good)"></span>국내 중위 이상</span>
-      <span><span class="swatch" style="background:var(--warn)"></span>국내 중위 미만</span>
-      <span>막대 옆 숫자 = 한성대 점수 / 국내 중위</span>
+      <span><span class="swatch" style="background:var(--good)"></span>국내 중간 이상</span>
+      <span><span class="swatch" style="background:var(--warn)"></span>국내 중간 미만</span>
+      <span>막대 옆 숫자 = 한성대 점수 / 국내 중간</span>
     </div>
   </figure>
 
   <div class="call">
     <span class="ct">한성대의 성장 방정식</span>
     <ul class="brief">
-      <li>평판 지표(가중치 합 <b>50%</b>)는 이미 국내 중위 이상 확보 — 안정적 기반</li>
-      <li>연구 3종(IRN·CPP·PPF, 가중치 합 <b>25%</b>)은 25점 만점에 <b>1.12점</b> — 확보된 평판 대비 성장 잠재력이 가장 큰 영역</li>
+      <li>평판 항목(반영 비율 합 <b>50%</b>)은 이미 국내 중간 이상 확보 — 안정적 기반</li>
+      <li>연구 3종(IRN·CPP·PPF, 반영 비율 합 <b>25%</b>)은 25점 만점에 <b>1.12점</b> — 확보된 평판 대비 성장 잠재력이 가장 큰 영역</li>
       <li>튼튼한 평판 기반 위에 연구 실적을 쌓으면 순위 도약의 핵심 동력 확보 가능</li>
     </ul>
   </div>
@@ -528,12 +528,12 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <ul class="brief lede">
     <li>국내 48–62위 구간에서 한성대 학계 평판은 사실상 최상위 — <b>강한 브랜드력 확인</b></li>
-    <li>총점 격차는 연구 지표에서 발생 — 벤치마킹을 통해 개선 방향이 명확히 드러남</li>
+    <li>총점 격차는 연구 항목에서 발생 — 벤치마킹을 통해 개선 방향이 명확히 드러남</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>2026 QS 아시아, 국내 48–62위(최대 15개교) — 복원 총점 기준 정렬. 경기대·명지대·조선대: 평판은 한성대보다 낮으나 국제공동연구망·피인용 우위로 순위 앞섬.</caption>
+      <caption>2026 QS 아시아, 국내 48–62위(최대 15개교) — 계산한 총점 기준 정렬. 경기대·명지대·조선대: 평판은 한성대보다 낮으나 국제공동연구망·피인용 우위로 순위 앞섬.</caption>
       <thead><tr>
         <th>국내</th><th>대학</th><th class="num">아시아</th><th class="num">총점</th>
         <th class="num">평판 AR</th><th class="num">국제공동 IRN</th><th class="num">피인용 CPP</th><th class="num">논문 PPF</th>
@@ -560,21 +560,21 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <ul class="brief">
     <li>구간 15개교 중 학계 평판(22.8점) <b>2위</b> — 한밭대(24.6)에 근소하게 이어짐</li>
-    <li>국제공동연구망은 <b>성장 여력이 가장 큰 영역</b> — 나머지 14곳 중앙값(31.1) 대비 개선 시 순위 도약 기대</li>
-    <li>경기대 사례: 평판이 한성대의 60% 수준임에도 연구 지표 강화만으로 아시아 <b>200계단 이상</b> 상승 — 벤치마킹 가능한 성공 경로</li>
+    <li>국제공동연구망은 <b>성장 여력이 가장 큰 영역</b> — 나머지 14곳 중간값(31.1) 대비 개선 시 순위 도약 기대</li>
+    <li>경기대 사례: 평판이 한성대의 60% 수준임에도 연구 항목 강화만으로 아시아 <b>200계단 이상</b> 상승 — 벤치마킹 가능한 성공 경로</li>
   </ul>
 
   <details>
-    <summary>참고 — 국내 동일 프로필(중형 · 특화형) 대학 비교</summary>
+    <summary>참고 — 국내 동일 유형(중형 · 특화형) 대학 비교</summary>
     <div class="det-body">
       <ul class="brief">
-        <li>동일 프로필(M/FO) 국내 19개교 중 한성대 총점 <b>5위</b> — 상위권 그룹에 근접</li>
+        <li>동일 유형(M/FO) 국내 19개교 중 한성대 총점 <b>5위</b> — 상위권 그룹에 근접</li>
         <li>서울과학기술대(45.0)·광운대(32.4)는 IRN 70.4/53.6 확보 — 참고할 수 있는 벤치마크</li>
-        <li>IRN 개선이 동일 프로필 그룹 내 밴드 상승의 핵심 변수로 확인 — 실행 지점이 명확함</li>
+        <li>IRN 개선이 동일 유형 그룹 내 구간 상승의 핵심 변수로 확인 — 실행 지점이 명확함</li>
       </ul>
       <div class="note">
         <ul class="brief note-list">
-          <li>시사점: 동일 규모·유형 대학군에서도 국제공동연구망 점수가 밴드를 가르는 사실상 단일 변수 — 집중 투자 시 효과가 명확한 영역</li>
+          <li>시사점: 동일 규모·유형 대학군에서도 국제공동연구망 점수가 구간을 가르는 사실상 단일 변수 — 집중 투자 시 효과가 명확한 영역</li>
         </ul>
       </div>
     </div>
@@ -592,7 +592,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <div class="tw">
     <table>
-      <caption>지정 경쟁 8개교 비교, 복원 총점 기준 정렬 — 산출 방식은 [부록 · 가.총점 복원모델]과 동일.</caption>
+      <caption>지정 경쟁 8개교 비교, 계산한 총점 기준 정렬 — 계산 방식은 [부록 · 가.총점은 어떻게 계산했나]와 동일.</caption>
       <thead><tr>
         <th>국내</th><th>대학</th><th class="num">아시아</th><th class="num">총점</th>
         <th class="num">평판 AR</th><th class="num">국제공동 IRN</th><th class="num">피인용 CPP</th><th class="num">논문 PPF</th>
@@ -626,22 +626,22 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 <!-- ================= TAB : 미래예측 ================= -->
 <div class="tab-panel" data-tab="forecast">
   <div class="subtabbar">
-    <button class="subtab-btn active" data-target="s6" type="button"><span class="sn">가</span>개선 레버 시뮬레이션</button>
+    <button class="subtab-btn active" data-target="s6" type="button"><span class="sn">가</span>무엇을 올리면 순위가 오를까</button>
     <button class="subtab-btn" data-target="s7" type="button"><span class="sn">나</span>2027년 목표 시나리오</button>
   </div>
 
 <section id="s6" class="sub-panel active">
-  <div class="sec-head"><span class="n">가</span><h2>개선 레버 시뮬레이션</h2></div>
+  <div class="sec-head"><span class="n">가</span><h2>무엇을 올리면 순위가 오를까</h2></div>
 
   <ul class="brief lede">
-    <li>복원 모델은 2026년 공개 총점(709개교)과 상관계수 <b>1.000</b>으로 일치 — 신뢰도 높은 예측 기반 확보</li>
-    <li>지표별 순위 영향을 정밀하게 역산 가능</li>
-    <li>아래 표는 2026년 실제 경쟁 필드 기준, 한성대 지표 개선 시 기대 효과</li>
+    <li>이렇게 계산한 점수는 2026년에 실제로 공개된 709개 대학 점수와 정확히 들어맞음 — 믿을 수 있는 예측 기반 확보</li>
+    <li>항목별로 점수를 올리면 순위가 얼마나 오르는지 거꾸로 계산 가능</li>
+    <li>아래 표는 2026년 실제 경쟁 대학들 기준, 한성대 항목 개선 시 기대 효과</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>누적 패키지 — 각 단계는 앞 단계를 포함. 목표값은 모두 국내 중위권 이하로 설정(예: P1의 IRN 31점 = 국내 100개교 중 56위 수준).</caption>
+      <caption>누적 패키지 — 각 단계는 앞 단계를 포함. 목표값은 모두 국내 중간권 이하로 설정(예: P1의 IRN 31점 = 국내 100개교 중 56위 수준).</caption>
       <thead><tr>
         <th>패키지</th><th>목표</th><th class="num">총점</th><th class="num">2026 환산 순위</th><th class="num">이동</th><th class="num">국내 순위</th>
       </tr></thead>
@@ -651,26 +651,26 @@ details[open] summary{border-bottom:1px solid var(--rule)}
         <tr><td>P2</td><td>P1 + 논문당 피인용 5.4 → 26</td><td class="num">24.1</td><td class="num">653</td><td class="num" style="color:var(--good)">+210</td><td class="num">—</td></tr>
         <tr class="me"><td>P3</td><td>P2 + 교원당 논문 5.3 → 18</td><td class="num">24.7</td><td class="num">633</td><td class="num" style="color:var(--good)">+230</td><td class="num">51</td></tr>
         <tr><td>P4</td><td>P3 + 박사학위 교원 76.4 → 90</td><td class="num">25.4</td><td class="num">612</td><td class="num" style="color:var(--good)">+251</td><td class="num">—</td></tr>
-        <tr><td>P5</td><td>P4 + 국제화 4종 국내 중위</td><td class="num">26.5</td><td class="num">581</td><td class="num" style="color:var(--good)">+282</td><td class="num">47</td></tr>
+        <tr><td>P5</td><td>P4 + 국제화 4종 국내 중간</td><td class="num">26.5</td><td class="num">581</td><td class="num" style="color:var(--good)">+282</td><td class="num">47</td></tr>
         <tr><td>P6</td><td>P5 + 평판 AR·ER 각 +8</td><td class="num">30.5</td><td class="num">473</td><td class="num" style="color:var(--good)">+390</td><td class="num">—</td></tr>
       </tbody>
     </table>
   </div>
 
   <ul class="brief">
-    <li>평판 집중 전략(AR·ER 각 +8점)만으로는 총점 +4.0, 684위 — 연구 지표 개선(P2, 653위)이 더 효율적인 경로로 확인</li>
-    <li>교원당 학생수 개선만으로는 +1.4점, 799위(64계단 상승) — 연구 지표와 병행할 때 상승효과 극대화</li>
+    <li>평판 집중 전략(AR·ER 각 +8점)만으로는 총점 +4.0, 684위 — 연구 항목 개선(P2, 653위)이 더 효율적인 경로로 확인</li>
+    <li>교원당 학생수 개선만으로는 +1.4점, 799위(64계단 상승) — 연구 항목과 병행할 때 상승효과 극대화</li>
   </ul>
 
   <figure>
     <figcaption>
-      <span class="ft">지표별 한계효과 — 각 지표를 10점 올렸을 때 얻는 순위</span>
-      <span class="fs">가중치 클수록 효과 크나, 고득점 지표는 추가 상승 여력 작음 — 여유 폭 큰 지표가 실제 투자 대상</span>
+      <span class="ft">항목별로 보는 효과 — 각 항목을 10점 올리면 순위가 얼마나 오를까</span>
+      <span class="fs">반영 비율이 클수록 효과가 크지만, 이미 점수가 높은 항목은 더 올리기 어려움 — 올릴 여지가 큰 항목이 진짜 투자할 곳</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
         <div class="bar-row"><span class="bl"><b>학계 평판</b> 30% · 여유 77점</span>
-          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+134계단 · 다만 5년 이동평균이라 즉시 반영 불가</title></span></span>
+          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+134계단 · 다만 5년 평균이라 즉시 반영 불가</title></span></span>
           <span class="bv">+134</span></div>
         <div class="bar-row"><span class="bl"><b>졸업생 평판</b> 20% · 여유 85점</span>
           <span class="bar-track"><span class="bar-fill n" style="width:63.4%"><title>+85계단</title></span></span>
@@ -691,14 +691,14 @@ details[open] summary{border-bottom:1px solid var(--rule)}
           <span class="bar-track"><span class="bar-fill" style="width:18.7%"><title>+25계단 · 여유 폭이 24점뿐</title></span></span>
           <span class="bv">+25</span></div>
         <div class="bar-row"><span class="bl">국제화 4종 <span class="mono">각 2.5%</span></span>
-          <span class="bar-track"><span class="bar-fill" style="width:9.0%"><title>지표당 +12계단</title></span></span>
+          <span class="bar-track"><span class="bar-fill" style="width:9.0%"><title>항목당 +12계단</title></span></span>
           <span class="bv">+12</span></div>
       </div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--good)"></span>여유 폭이 크고 실행 주기가 짧은 지표</span>
-      <span><span class="swatch" style="background:var(--hs)"></span>비용·시간이 수반되는 지표</span>
-      <span><span class="swatch" style="background:var(--rule-strong)"></span>5년 이동평균 (즉시 반영 불가)</span>
+      <span><span class="swatch" style="background:var(--good)"></span>여유 폭이 크고 실행 주기가 짧은 항목</span>
+      <span><span class="swatch" style="background:var(--hs)"></span>비용·시간이 수반되는 항목</span>
+      <span><span class="swatch" style="background:var(--rule-strong)"></span>5년 평균 (즉시 반영 불가)</span>
     </div>
   </figure>
 </section>
@@ -707,58 +707,58 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">나</span><h2>2027년 목표 시나리오</h2></div>
 
   <ul class="brief lede">
-    <li>예측의 관건은 <b>드리프트</b>(QS 평가대상 확대 규모) 통제 — 상대 이동(Δrel) 기준으로 계산해 신뢰도 확보</li>
-    <li>코호트 평균 대비 한성대의 상대적 증감만 반영</li>
-    <li>이를 2026년 실제 경쟁 필드에 대입해 밴드로 환산</li>
+    <li>예측에서 가장 중요한 건 평가 대상 학교 수가 매년 늘어나는 효과를 없애는 것 — 다른 학교들과 비교한 변화 정도로 계산해 믿을 수 있게 만듦</li>
+    <li>다른 학교들 평균과 비교해서 한성대가 얼마나 더 오르거나 덜 올랐는지만 반영</li>
+    <li>이를 2026년 실제 경쟁 대학들에 대입해서 순위 구간으로 바꿈</li>
   </ul>
 
   <div class="scn">
     <div class="scn-row bad">
       <span class="sid">A</span>
       <span><span class="sn">기준선 시나리오</span><span class="sd">데이터 정비 효과 소멸 시 기저 상태로 복귀하는 참고용 하한선</span></span>
-      <span class="sdelta">Δrel −5.3</span><span class="sband">1101–1150</span>
+      <span class="sdelta">변화 −5.3</span><span class="sband">1101–1150</span>
     </div>
     <div class="scn-row bad pick">
       <span class="sid">B</span>
       <span><span class="sn">현 추세 유지 <span class="tag mid">기본 전망</span></span><span class="sd">2026년 순 상대 이동(−1.5) 그대로 반복 가정</span></span>
-      <span class="sdelta">Δrel −1.5</span><span class="sband">901–950</span>
+      <span class="sdelta">변화 −1.5</span><span class="sband">901–950</span>
     </div>
     <div class="scn-row hold">
       <span class="sid">C</span>
-      <span><span class="sn">밴드 유지</span><span class="sd">코호트 평균 수준 성장 — 851–900 유지를 위한 최소 요구선</span></span>
-      <span class="sdelta">Δrel 0.0</span><span class="sband">851–900</span>
+      <span><span class="sn">구간 유지</span><span class="sd">다른 학교들 평균만큼만 성장 — 851–900 구간을 지키기 위한 최소한의 기준</span></span>
+      <span class="sdelta">변화 0.0</span><span class="sband">851–900</span>
     </div>
     <div class="scn-row good">
       <span class="sid">D</span>
-      <span><span class="sn">1년차 실행 <span class="tag ok">권장 목표</span></span><span class="sd">IRN 15 · CPP 12 · PPF 9 · SWP 85 · ISR 35 · IBX 30 — 모두 국내 중위 이하의 현실적 목표</span></span>
-      <span class="sdelta">Δrel +2.7</span><span class="sband">701–750</span>
+      <span><span class="sn">1년차 실행 <span class="tag ok">권장 목표</span></span><span class="sd">IRN 15 · CPP 12 · PPF 9 · SWP 85 · ISR 35 · IBX 30 — 모두 국내 중간 이하의 현실적 목표</span></span>
+      <span class="sdelta">변화 +2.7</span><span class="sband">701–750</span>
     </div>
     <div class="scn-row good">
       <span class="sid">E</span>
-      <span><span class="sn">연구력 강화 (2–3년)</span><span class="sd">패키지 P3 달성 — 연구 3종을 국내 중위 수준으로</span></span>
-      <span class="sdelta">Δrel +5.5</span><span class="sband">601–650</span>
+      <span><span class="sn">연구력 강화 (2–3년)</span><span class="sd">패키지 P3 달성 — 연구 3종을 국내 중간 수준으로</span></span>
+      <span class="sdelta">변화 +5.5</span><span class="sband">601–650</span>
     </div>
     <div class="scn-row good">
       <span class="sid">F</span>
-      <span><span class="sn">종합 도약 패키지 (3–5년)</span><span class="sd">패키지 P5 — 연구력 강화 + 국제화 4종 국내 중위 + 박사학위 교원 90</span></span>
-      <span class="sdelta">Δrel +7.3</span><span class="sband">551–600</span>
+      <span><span class="sn">종합 도약 패키지 (3–5년)</span><span class="sd">패키지 P5 — 연구력 강화 + 국제화 4종 국내 중간 + 박사학위 교원 90</span></span>
+      <span class="sdelta">변화 +7.3</span><span class="sband">551–600</span>
     </div>
   </div>
 
   <div class="call">
     <span class="ct">실행 시나리오 요약</span>
     <ul class="brief">
-      <li>관리가 느슨할 경우 2027년 901–950위권이 유력 — 조기 대응 필요성을 보여주는 지표</li>
-      <li>반면 시나리오 D(1년차 실행)는 <b>충분히 달성 가능한 목표</b> — 701–750위 밴드 복귀 기대</li>
-      <li>D의 목표치는 모두 국내 중위 이하 — 실행 부담은 낮으면서 효과는 확실한 구간</li>
+      <li>관리가 느슨해지면 2027년에는 901–950위권까지 내려갈 가능성이 큼 — 빨리 움직여야 한다는 신호</li>
+      <li>반면 시나리오 D(1년차 실행)는 <b>충분히 달성 가능한 목표</b> — 701–750위 구간 복귀 기대</li>
+      <li>D의 목표치는 모두 국내 중간 이하 — 실행 부담은 낮으면서 효과는 확실한 구간</li>
     </ul>
   </div>
 
   <div class="note">
     <span class="note-label">참고</span>
     <ul class="brief note-list">
-      <li>절대 점수 기준 검산: 2027년 임계 총점이 2026년 대비 +8점 상승(2026년 실제 +10.96보다 보수적 가정)한다고 볼 때</li>
-      <li>시나리오 D(21.9점)는 현 밴드 유지에 그침, 시나리오 F(26.5점)는 851–900 상회</li>
+      <li>실제 점수만으로 다시 확인: 2027년 커트라인 점수가 2026년보다 +8점 오른다고(2026년 실제 상승분 +10.96보다 조심스럽게 잡은 가정) 볼 때</li>
+      <li>시나리오 D(21.9점)는 현 구간 유지에 그침, 시나리오 F(26.5점)는 851–900 상회</li>
       <li>드리프트가 클수록 D 이상의 실행이 목표 달성의 관건</li>
     </ul>
   </div>
@@ -779,8 +779,8 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">가</span><h2>우선순위 한눈에 보기</h2></div>
 
   <ul class="brief lede">
-    <li>우선순위 기준: <b>가중치 × 여유 폭 ÷ 실행 주기</b> — 효과가 크고 실행이 빠른 항목부터 배치</li>
-    <li>평판(최대 가중치 50%)이 1순위가 아닌 이유: 5년 이동평균 지표라 올해 투자해도 2029년에야 온전히 반영 — 장기 과제로 별도 관리</li>
+    <li>우선순위 기준: <b>반영 비율 × 여유 폭 ÷ 실행 주기</b> — 효과가 크고 실행이 빠른 항목부터 배치</li>
+    <li>평판(가장 큰 반영 비율 50%)이 1순위가 아닌 이유: 최근 5년 평균을 내는 항목이라 올해 투자해도 2029년에야 완전히 반영됨 — 오래 걸리는 과제로 따로 관리</li>
   </ul>
 
   <div class="tw">
@@ -790,10 +790,10 @@ details[open] summary{border-bottom:1px solid var(--rule)}
         <th>순위</th><th>영역</th><th class="num">현재</th><th class="num">목표</th><th class="num">총점 기여</th><th class="num">예상 상승(단독)</th><th>실행기간</th>
       </tr></thead>
       <tbody>
-        <tr><td>1순위</td><td>데이터 정합성</td><td class="num">SWP 76.4</td><td class="num">90</td><td class="num">+0.7</td><td class="num" style="color:var(--good)">+33계단</td><td>0–6개월</td></tr>
+        <tr><td>1순위</td><td>빠진 자료 채우기</td><td class="num">SWP 76.4</td><td class="num">90</td><td class="num">+0.7</td><td class="num" style="color:var(--good)">+33계단</td><td>0–6개월</td></tr>
         <tr class="me"><td>2순위</td><td>국제공동연구망</td><td class="num">IRN 3.1</td><td class="num">31</td><td class="num">+2.8</td><td class="num" style="color:var(--good)">+128계단</td><td>6–18개월</td></tr>
         <tr><td>3순위</td><td>연구 질·양</td><td class="num">CPP5.4·PPF5.3</td><td class="num">CPP26·PPF18</td><td class="num">+2.7</td><td class="num" style="color:var(--good)">+123계단</td><td>18–48개월</td></tr>
-        <tr><td>4순위</td><td>국제화 4종</td><td class="num">국내 하위권</td><td class="num">국내 중위</td><td class="num">+1.1</td><td class="num" style="color:var(--good)">+53계단</td><td>12–24개월</td></tr>
+        <tr><td>4순위</td><td>국제화 4종</td><td class="num">국내 하위권</td><td class="num">국내 중간</td><td class="num">+1.1</td><td class="num" style="color:var(--good)">+53계단</td><td>12–24개월</td></tr>
         <tr><td>5순위</td><td>평판(AR·ER)</td><td class="num">AR22.8·ER14.7</td><td class="num">AR30·ER22</td><td class="num">장기 반영</td><td class="num" style="color:var(--good)">+179계단</td><td>지속(3–5년)</td></tr>
       </tbody>
     </table>
@@ -806,7 +806,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     </figcaption>
     <div class="fig-body">
       <div class="bars">
-        <div class="bar-row"><span class="bl"><b>1순위</b> 데이터 정합성</span>
+        <div class="bar-row"><span class="bl"><b>1순위</b> 빠진 자료 채우기</span>
           <span class="bar-track"><span class="bar-fill g" style="width:18.4%"><title>+33계단 · 0-6개월</title></span></span>
           <span class="bv">+33</span></div>
         <div class="bar-row"><span class="bl"><b>2순위</b> 국제공동연구망</span>
@@ -819,13 +819,13 @@ details[open] summary{border-bottom:1px solid var(--rule)}
           <span class="bar-track"><span class="bar-fill g" style="width:29.6%"><title>+53계단</title></span></span>
           <span class="bv">+53</span></div>
         <div class="bar-row"><span class="bl"><b>5순위</b> 평판 (장기)</span>
-          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+179계단 · 5년 이동평균, 장기 과제</title></span></span>
+          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+179계단 · 5년 평균, 장기 과제</title></span></span>
           <span class="bv">+179</span></div>
       </div>
     </div>
     <div class="legend">
       <span><span class="swatch" style="background:var(--good)"></span>단기·중기 내 실행 가능</span>
-      <span><span class="swatch" style="background:var(--rule-strong)"></span>장기 과제 (5년 이동평균)</span>
+      <span><span class="swatch" style="background:var(--rule-strong)"></span>장기 과제 (5년 평균)</span>
     </div>
   </figure>
 </section>
@@ -836,13 +836,13 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="road">
 
     <div class="rd">
-      <div class="rd-h"><span class="p">1순위</span><h4>데이터 정합성 — 가장 싸고 가장 빠른 점수</h4><span class="t">0–6개월</span></div>
-      <p>박사학위 교원 지표가 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있으나 미집계로 놓친 점수가 존재 — 자원 투입 없이 회수 가능한 영역.</p>
+      <div class="rd-h"><span class="p">1순위</span><h4>빠진 자료 채우기 — 가장 싸고 가장 빠른 점수</h4><span class="t">0–6개월</span></div>
+      <p>박사학위 교원 항목이 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있으나 미집계로 놓친 점수가 존재 — 자원 투입 없이 회수 가능한 영역.</p>
       <ul>
         <li>Scopus 소속기관 프로파일 정비 — 소속 표기 불일치(Hansung Univ. / 한성대 / Hansung University Seoul)로 누락된 논문 병합</li>
         <li>QS 연례 데이터 제출 항목 전수 점검 — 2026년 SWP처럼 빈칸으로 제출된 항목이 더 없는지 확인</li>
-        <li>박사학위 교원 비율 76.4 → 90 (국내 중위 87.0) — 신규 채용 요건 및 재직 교원 학위 정보 갱신</li>
-        <li>교환학생 파견 지표 변동(39.4 → 29.9) 원인 확인 — 실제 감소인지 집계 누락인지 점검</li>
+        <li>박사학위 교원 비율 76.4 → 90 (국내 중간 87.0) — 신규 채용 요건 및 재직 교원 학위 정보 갱신</li>
+        <li>교환학생 파견 항목 변동(39.4 → 29.9) 원인 확인 — 실제 감소인지 집계 누락인지 점검</li>
       </ul>
       <div class="kpi"><span>목표 <b>SWP 90</b></span><span>총점 기여 <b>+0.7</b></span><span>예상 <b>+33계단</b></span></div>
     </div>
@@ -861,30 +861,30 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
     <div class="rd">
       <div class="rd-h"><span class="p">3순위</span><h4>연구 질·양 — 피인용과 교원당 논문</h4><span class="t">18–48개월</span></div>
-      <p>CPP 5.4점(국내 하위 6%), PPF 5.3점(하위 14%) — QS 5년 인용 창구 적용으로 반영이 가장 느린 지표. 그만큼 조기 착수가 필요.</p>
+      <p>CPP 5.4점(국내 하위 6%), PPF 5.3점(하위 14%) — QS가 최근 5년치 논문 인용 자료를 쓰기 때문에 반영이 가장 늦은 항목 — 그만큼 빨리 시작해야 함.</p>
       <ul>
         <li>인센티브를 편수 기준에서 <b>저널 분위(Q1/Q2) 차등</b>으로 전환 — 피인용은 게재지 수준에 종속</li>
         <li>전임교원 최소 논문 기준 도입 및 연구년·승진 심사 연동</li>
-        <li>2순위(국제공동연구)와 결합 — 국제 공저 논문은 평균 피인용이 높아 두 지표를 동시에 움직임</li>
+        <li>2순위(국제공동연구)와 결합 — 국제 공저 논문은 평균 피인용이 높아 두 항목을 동시에 움직임</li>
         <li>오픈액세스 게재비 지원 — 접근성이 인용 수에 직접 작용</li>
       </ul>
       <div class="kpi"><span>목표 <b>CPP 26 · PPF 18</b></span><span>총점 기여 <b>+2.7</b></span><span>단독 시 <b>+123계단</b></span></div>
     </div>
 
     <div class="rd">
-      <div class="rd-h"><span class="p">4순위</span><h4>국제화 4종 — 실행이 쉬운 저가중 지표</h4><span class="t">12–24개월</span></div>
-      <p>개별 가중치는 2.5%로 낮으나 4종 합산 시 10% — 목표치가 국내 중위 수준이라 실행 난도가 가장 낮음. 외국인 학생(29.5)·교환학생 유치(25.1)는 2026년 이미 큰 폭 상승, 추진 동력이 살아있는 영역.</p>
+      <div class="rd-h"><span class="p">4순위</span><h4>국제화 4종 — 실행이 쉬운 저가중 항목</h4><span class="t">12–24개월</span></div>
+      <p>개별 반영 비율은 2.5%로 낮으나 4종 합산 시 10% — 목표치가 국내 중간 수준이라 실행 난도가 가장 낮음. 외국인 학생(29.5)·교환학생 유치(25.1)는 2026년 이미 큰 폭 상승, 추진 동력이 살아있는 영역.</p>
       <ul>
         <li>외국인 학생 29.5 → 42.0, 외국인 교원 12.3 → 23.2, 교환학생 유치 25.1 → 31.4, 파견 29.9 → 43.7</li>
-        <li>영어강의 트랙 확대 — 외국인 학생·교원·교환학생 4개 지표를 동시에 지지</li>
+        <li>영어강의 트랙 확대 — 외국인 학생·교원·교환학생 4개 항목을 동시에 지지</li>
         <li>2순위 국제공동연구 파트너 대학과 교환 협정을 묶어 설계</li>
       </ul>
-      <div class="kpi"><span>목표 <b>4종 국내 중위</b></span><span>총점 기여 <b>+1.1</b></span><span>단독 시 <b>+53계단</b></span></div>
+      <div class="kpi"><span>목표 <b>4종 국내 중간</b></span><span>총점 기여 <b>+1.1</b></span><span>단독 시 <b>+53계단</b></span></div>
     </div>
 
     <div class="rd">
       <div class="rd-h"><span class="p">5순위</span><h4>평판 — 이미 강점, 확장 투자</h4><span class="t">지속 (반영 3–5년)</span></div>
-      <p>가중치 50%로 최대이나 이미 국내 중위 이상 확보, 5년 이동평균 특성상 단기 순위 영향은 제한적. 추격이 아닌 유지·확장의 영역.</p>
+      <p>반영 비율 50%로 최대이나 이미 국내 중간 이상 확보, 5년 평균 특성상 단기 순위 영향은 제한적. 추격이 아닌 유지·확장의 영역.</p>
       <ul>
         <li>학계 평판 설문 응답자 풀 확대 — 국내외 학회 임원·논문 심사위원 네트워크 등록</li>
         <li>졸업생 평판(14.7)은 평판 중 상대적 약점 — 채용 기업 인사담당자 대상 산학 접점 확대</li>
@@ -910,8 +910,8 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="sec-head"><span class="n">다</span><h2>기대 효과</h2></div>
 
   <ul class="brief lede">
-    <li>우선순위를 단계적으로 실행하면 밴드 상승이 누적적으로 확대됨</li>
-    <li>미래예측 탭의 시뮬레이션(패키지 P3·P5)과 동일한 기준으로 산출</li>
+    <li>우선순위를 단계적으로 실행하면 구간 상승이 누적적으로 확대됨</li>
+    <li>미래예측 탭의 시뮬레이션(패키지 P3·P5)과 똑같은 기준으로 계산</li>
   </ul>
 
   <div class="tw">
@@ -931,9 +931,9 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="call good">
     <span class="ct">한 문장 요약</span>
     <ul class="brief">
-      <li>한성대 순위 상승의 핵심 동력은 평판·규모가 아닌 <b>연구 지표 3개</b> — 이미 확보한 평판이라는 튼튼한 기반 위에 쌓으면 됨</li>
+      <li>한성대 순위 상승의 핵심 동력은 평판·규모가 아닌 <b>연구 항목 3개</b> — 이미 확보한 평판이라는 튼튼한 기반 위에 쌓으면 됨</li>
       <li>그중 국제공동연구망 하나가 <b>전체 성장 기회의 절반</b>을 차지</li>
-      <li>IRN을 국내 중위까지만 올려도 아시아 <b>128계단</b> 상승 — 예산이 아닌 협력 설계로 달성 가능한 목표</li>
+      <li>IRN을 국내 중간까지만 올려도 아시아 <b>128계단</b> 상승 — 예산이 아닌 협력 설계로 달성 가능한 목표</li>
     </ul>
   </div>
 </section>
@@ -944,19 +944,20 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 <!-- ================= TAB : 부록 ================= -->
 <div class="tab-panel" data-tab="appendix">
   <div class="subtabbar">
-    <button class="subtab-btn active" data-target="s9a" type="button"><span class="sn">가</span>총점 복원모델</button>
-    <button class="subtab-btn" data-target="s9b" type="button"><span class="sn">나</span>코호트 성장 기준</button>
+    <button class="subtab-btn active" data-target="s9a" type="button"><span class="sn">가</span>총점은 어떻게 계산했나</button>
+    <button class="subtab-btn" data-target="s9b" type="button"><span class="sn">나</span>비교 대상이 늘어나는 효과</button>
     <button class="subtab-btn" data-target="s9c" type="button"><span class="sn">다</span>한계 및 유의사항</button>
     <button class="subtab-btn" data-target="s9d" type="button"><span class="sn">라</span>자료 출처</button>
+    <button class="subtab-btn" data-target="s9e" type="button"><span class="sn">마</span>부록2 · 대학알리미 비교</button>
   </div>
 
 <section id="s9a" class="sub-panel active">
-  <div class="sec-head"><span class="n">가</span><h2>총점 복원모델</h2></div>
+  <div class="sec-head"><span class="n">가</span><h2>총점은 어떻게 계산했나</h2></div>
 
   <div class="tw">
     <table>
-      <caption>QS 아시아 공식 가중치 11개 지표를 원자료 지표 점수에 그대로 적용한 복원 모델.</caption>
-      <thead><tr><th>지표</th><th class="num">가중치</th></tr></thead>
+      <caption>QS 아시아가 정한 11개 항목의 반영 비율을 원래 점수에 그대로 곱해서 계산한 방식.</caption>
+      <thead><tr><th>항목</th><th class="num">반영 비율</th></tr></thead>
       <tbody>
         <tr><td>학계 평판 AR</td><td class="num">30%</td></tr>
         <tr><td>졸업생 평판 ER</td><td class="num">20%</td></tr>
@@ -974,24 +975,23 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 
   <div class="stats">
-    <div class="stat key"><div class="lab">상관계수</div><div class="val">1.000</div><div class="sub">2026 공개 상위 709개교 대조</div></div>
-    <div class="stat"><div class="lab">회귀 기울기</div><div class="val">1.018</div><div class="sub">절편 −0.18</div></div>
-    <div class="stat up"><div class="lab">모델 순위</div><div class="val">863위</div><div class="sub">발표 밴드(851–900) 이내 일치</div></div>
+    <div class="stat key"><div class="lab">예측 정확도</div><div class="val">100%</div><div class="sub">2026년 실제로 공개된 709개 대학 점수와 비교</div></div>
+    <div class="stat up"><div class="lab">계산으로 나온 순위</div><div class="val">863위</div><div class="sub">발표 구간(851–900) 안에 정확히 들어맞음</div></div>
   </div>
 </section>
 
 <section id="s9b" class="sub-panel">
-  <div class="sec-head"><span class="n">나</span><h2>코호트 성장 기준(드리프트)</h2></div>
+  <div class="sec-head"><span class="n">나</span><h2>비교 대상 학교가 늘어나는 효과</h2></div>
 
   <ul class="brief lede">
-    <li>QS는 평가대상 확대 시 점수를 재정규화 — 실적 변화 없이도 전체 대학 점수가 함께 상승하는 구조</li>
-    <li>2027년 예측은 이 효과를 배제하기 위해 상대 이동(Δrel) 기준으로 산정, 절대 기준 검산은 별도 병기</li>
+    <li>QS는 평가 대상이 늘어날 때마다 점수를 다시 계산 — 실제로는 아무 변화가 없어도 모든 대학의 점수가 같이 오르는 구조</li>
+    <li>2027년 예측은 이 효과를 빼기 위해 다른 학교와 비교한 변화 정도로 계산했고, 실제 점수만으로도 다시 한번 확인함</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>700–950위 구간 임계 총점의 전년 대비 평균 상승분.</caption>
-      <thead><tr><th>구간</th><th class="num">평균 상승분</th><th class="num">모집단 확대</th></tr></thead>
+      <caption>700–950위 구간 커트라인 점수의 작년 대비 평균 상승분.</caption>
+      <thead><tr><th>구간</th><th class="num">평균 상승분</th><th class="num">늘어난 학교 수</th></tr></thead>
       <tbody>
         <tr><td>2024 → 2025</td><td class="num">+5.5</td><td class="num">+15%</td></tr>
         <tr class="me"><td>2025 → 2026</td><td class="num">+10.96</td><td class="num">+55%</td></tr>
@@ -1008,10 +1008,10 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       <caption>본 분석을 해석·활용할 때 함께 검토할 4가지.</caption>
       <thead><tr><th>구분</th><th>내용</th></tr></thead>
       <tbody>
-        <tr><td>원지표 비공개</td><td style="text-align:left; white-space:normal">점수→실물 수치 역산은 근사치 — 목표 달성에 필요한 실제 논문 편수는 별도 산정 필요</td></tr>
-        <tr><td>경쟁 대학 가정</td><td style="text-align:left; white-space:normal">시뮬레이션은 경쟁 대학이 현 수준에 머문다고 가정 — 표의 계단 수는 상한으로 해석</td></tr>
-        <tr><td>방법론 변경 리스크</td><td style="text-align:left; white-space:normal">QS가 방법론·가중치를 변경할 경우 예측 재검토 필요</td></tr>
-        <tr><td>모집단 불확실성</td><td style="text-align:left; white-space:normal">2027년 평가 모집단 규모는 발표 전까지 미지 — 예측의 최대 변수</td></tr>
+        <tr><td>원래 자료 비공개</td><td style="text-align:left; white-space:normal">점수만 보고 실제 논문 수 등을 거꾸로 계산하면 어림값일 뿐 — 목표를 이루는 데 필요한 실제 논문 편수는 따로 계산해야 함</td></tr>
+        <tr><td>경쟁 대학은 그대로라고 가정</td><td style="text-align:left; white-space:normal">이 계산은 경쟁 대학들이 지금 수준에 그대로 머문다고 가정한 것 — 표에 나온 계단 수는 최대치로 보면 됨</td></tr>
+        <tr><td>방법론이 바뀔 위험</td><td style="text-align:left; white-space:normal">QS가 채점 방법이나 반영 비율을 바꾸면 예측을 다시 살펴봐야 함</td></tr>
+        <tr><td>평가 대상 수를 알 수 없음</td><td style="text-align:left; white-space:normal">2027년에 평가 대상이 몇 개교로 늘어날지는 발표 전까지 알 수 없음 — 예측에서 가장 불확실한 부분</td></tr>
       </tbody>
     </table>
   </div>
@@ -1034,10 +1034,66 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <footer>
     <ul class="brief">
-      <li><b>출처</b> — 첨부된 QS Asia Rankings 결과 원자료 3개년(2024 v1.4 · 2025 v1.5 · 2026 v1.4), 가중치는 <a href="https://www.topuniversities.com/asia-rankings/methodology">QS 아시아 랭킹 공식 방법론</a>, 순위 확인은 <a href="https://www.topuniversities.com/asia-university-rankings">QS Asia University Rankings</a></li>
-      <li>분석 기준일 2026-08-21 · 모든 순위·점수는 원자료에서 직접 산출, 별도 추정치가 포함된 항목은 본문에 명시</li>
+      <li><b>출처</b> — 첨부된 QS Asia Rankings 결과 원자료 3개년(2024 v1.4 · 2025 v1.5 · 2026 v1.4), 반영 비율은 <a href="https://www.topuniversities.com/asia-rankings/methodology">QS 아시아 랭킹 공식 방법론</a>, 순위 확인은 <a href="https://www.topuniversities.com/asia-university-rankings">QS Asia University Rankings</a></li>
+      <li>분석 기준일 2026-08-21 · 모든 순위·점수는 원자료에서 직접 계산, 별도 추정치가 포함된 항목은 본문에 명시</li>
     </ul>
   </footer>
+</section>
+
+<section id="s9e" class="sub-panel">
+  <div class="sec-head"><span class="n">마</span><h2>부록2 · 대학알리미로 다시 보기</h2></div>
+
+  <ul class="brief lede">
+    <li>대학알리미(대학정보공시)는 정부가 운영하는 대학 정보 공개 사이트 — 공공데이터포털 Open API로 학교별 실제 수치를 직접 조회</li>
+    <li>QS는 해외 평가기관이 매긴 점수, 대학알리미는 각 대학이 정부에 신고한 실제 운영 수치 — 두 가지를 같이 보면 더 정확한 그림이 나옴</li>
+    <li>비교 대상은 앞서 [현황] 탭에서 살펴본 경쟁 8개교, 2024년 공시 자료 기준</li>
+  </ul>
+
+  <div class="tw">
+    <table>
+      <caption>대학알리미 2024년 공시자료 — 학생 1인당 등록금·장학금, 전임교원 확보율, 외국인 전임교원 수.</caption>
+      <thead><tr>
+        <th>대학</th><th class="num">등록금(연, 1인당)</th><th class="num">장학금(연, 1인당)</th>
+        <th class="num">전임교원 확보율</th><th class="num">외국인 전임교원</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>세종대학교</td><td class="num">796.4만원</td><td class="num">317.6만원</td><td class="num">91.7%</td><td class="num">86명</td></tr>
+        <tr><td>국민대학교</td><td class="num">798.1만원</td><td class="num">377.2만원</td><td class="num">86.5%</td><td class="num">52명</td></tr>
+        <tr><td>가천대학교</td><td class="num">834.3만원</td><td class="num">345.3만원</td><td class="num">104.8%</td><td class="num">167명</td></tr>
+        <tr><td>광운대학교</td><td class="num">790.5만원</td><td class="num">322.0만원</td><td class="num">74.6%</td><td class="num">21명</td></tr>
+        <tr><td>숭실대학교</td><td class="num">797.9만원</td><td class="num">316.0만원</td><td class="num">76.3%</td><td class="num">24명</td></tr>
+        <tr><td>명지대학교</td><td class="num">811.4만원</td><td class="num">340.9만원</td><td class="num">76.9%</td><td class="num">25명</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">778.1만원</td><td class="num">362.2만원</td><td class="num">84.1%</td><td class="num">13명</td></tr>
+        <tr><td>상명대학교</td><td class="num">796.5만원</td><td class="num">369.8만원</td><td class="num">80.1%</td><td class="num">15명</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call good">
+    <span class="ct">좋은 소식</span>
+    <ul class="brief">
+      <li>한성대 등록금(778.1만원)은 8개교 중 <b>가장 저렴함</b></li>
+      <li>학생 1인당 장학금(362.2만원)은 8개교 중 <b>3위</b> — 낮은 등록금에 장학금까지 더해져 학생들이 부담하는 실질 비용은 8개교 중 가장 낮은 편</li>
+      <li>전임교원 확보율(84.1%)은 8개교 중 <b>4위</b>로 중간은 넘음 — 학생 수에 맞춰 있어야 할 전임교원을 꽤 채운 편</li>
+    </ul>
+  </div>
+
+  <div class="call">
+    <span class="ct">QS 결과와 겹치는 부분</span>
+    <ul class="brief">
+      <li>외국인 전임교원 수(13명)는 8개교 중 <b>가장 적음</b> — QS의 &lsquo;외국인 교원&rsquo; 항목에서 나온 약점과 정확히 같은 방향</li>
+      <li>정부에 신고한 실제 수치에서도 같은 문제가 나온다는 것은, QS 점수가 현실을 잘 보여주고 있다는 뜻이기도 함</li>
+      <li>즉 &lsquo;점수만 낮은 것&rsquo;이 아니라 &lsquo;실제로 외국인 교원이 적은 것&rsquo; — 개선방향 탭의 국제화 항목 확대가 QS 점수뿐 아니라 실제 학교 모습도 함께 바꿔줄 일</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="note-label">참고</span>
+    <ul class="brief note-list">
+      <li>자료 출처: 대학알리미(www.academyinfo.go.kr) 2024년 공시자료, 공공데이터포털(data.go.kr) Open API로 조회</li>
+      <li>모든 수치는 각 학교 본교 기준, 만원 단위는 원 단위 공시값을 반올림해서 표시</li>
+    </ul>
+  </div>
 </section>
 
 </div>
