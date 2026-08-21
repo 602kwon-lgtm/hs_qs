@@ -1029,67 +1029,98 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <ul class="brief lede">
     <li>대학알리미(대학정보공시)는 정부가 운영하는 대학 정보 공개 사이트 — 공공데이터포털 Open API로 학교별 실제 수치를 직접 조회</li>
-    <li>QS 항목 중 실제 정부 통계와 짝지을 수 있는 두 가지만 골라 <b>QS 점수·국내순위</b>와 <b>대학알리미 실제 수치</b>를 나란히 비교</li>
-    <li>비교 대상은 [현황] 탭에서 살펴본 경쟁 8개교, 2024년 자료 기준(QS는 2026년 발표 기준 2024년 제출 자료 사용)</li>
+    <li>QS 8개 항목(교원당 학생수·국제공동연구망·피인용·논문·외국인 교원·외국인 학생·교환학생 유치·파견) 중, 지금 받아둔 API로 실제로 짝지을 수 있는 건 <b>3개</b> — 나머지는 아래 참고에 이유를 밝힘</li>
+    <li>비교 대상은 [현황] 탭의 경쟁 8개교, 2024년 자료 기준(QS 2026년 발표도 2024년 제출 자료를 사용)</li>
   </ul>
 
   <div class="tw">
     <table>
       <caption>전임교원 1인당 학생수 — QS &lsquo;교원당 학생수(FSR)&rsquo; 항목과 대학알리미 실제 수치 비교. 국내순위는 103개 평가대학 기준.</caption>
       <thead><tr>
-        <th>대학</th><th class="num">대학알리미 실제 학생수(명)</th><th class="num">QS FSR 점수</th><th class="num">QS FSR 국내순위</th>
+        <th>대학</th><th class="num">대학알리미 학생수(명)</th><th class="num">한성대 대비</th><th class="num">QS FSR 점수</th><th class="num">QS FSR 국내순위</th>
       </tr></thead>
       <tbody>
-        <tr><td>세종대학교</td><td class="num">29.90</td><td class="num">31.7</td><td class="num">52위</td></tr>
-        <tr><td>국민대학교</td><td class="num">30.49</td><td class="num">87.3</td><td class="num">25위</td></tr>
-        <tr><td>가천대학교</td><td class="num">26.27</td><td class="num">42.2</td><td class="num">46위</td></tr>
-        <tr><td>광운대학교</td><td class="num">32.90</td><td class="num">16.2</td><td class="num">81위</td></tr>
-        <tr><td>숭실대학교</td><td class="num">37.34</td><td class="num">24.2</td><td class="num">65위</td></tr>
-        <tr><td>명지대학교</td><td class="num">32.11</td><td class="num">31.4</td><td class="num">53위</td></tr>
-        <tr class="me"><td>한성대학교</td><td class="num">30.67</td><td class="num">20.8</td><td class="num">72위</td></tr>
-        <tr><td>상명대학교</td><td class="num">28.68</td><td class="num">19.0</td><td class="num">77위</td></tr>
+        <tr><td>세종대학교</td><td class="num">29.90</td><td class="num">−0.8명</td><td class="num">31.7</td><td class="num">52위</td></tr>
+        <tr><td>국민대학교</td><td class="num">30.49</td><td class="num">−0.2명</td><td class="num">87.3</td><td class="num">25위</td></tr>
+        <tr><td>가천대학교</td><td class="num">26.27</td><td class="num">−4.4명</td><td class="num">42.2</td><td class="num">46위</td></tr>
+        <tr><td>광운대학교</td><td class="num">32.90</td><td class="num">+2.2명</td><td class="num">16.2</td><td class="num">81위</td></tr>
+        <tr><td>숭실대학교</td><td class="num">37.34</td><td class="num">+6.7명</td><td class="num">24.2</td><td class="num">65위</td></tr>
+        <tr><td>명지대학교</td><td class="num">32.11</td><td class="num">+1.4명</td><td class="num">31.4</td><td class="num">53위</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">30.67</td><td class="num">기준</td><td class="num">20.8</td><td class="num">72위</td></tr>
+        <tr><td>상명대학교</td><td class="num">28.68</td><td class="num">−2.0명</td><td class="num">19.0</td><td class="num">77위</td></tr>
       </tbody>
     </table>
   </div>
 
   <ul class="brief">
-    <li>전임교원 1인당 학생수는 적을수록 좋음 — 한성대(30.67명)는 8개교 중 5위로 중간권, 가천대(26.27명)가 가장 여유 있음</li>
-    <li>다만 국민대는 실제 학생수(30.49명)가 한성대와 비슷한데도 QS FSR 점수는 훨씬 높음(87.3점, 25위) — QS 점수가 대학알리미의 단순 비율만으로 정해지지 않고, 다른 계산 방식이 섞여 있다는 뜻</li>
+    <li>전임교원 1인당 학생수는 적을수록 좋음 — 한성대(30.67명)는 8개교 중 5위로 중간권</li>
+    <li>다만 국민대는 실제 학생수(30.49명)가 한성대와 거의 같은데도 QS FSR 점수는 훨씬 높음(87.3점, 25위) — 실제 수치만으로는 설명이 안 되는 차이</li>
   </ul>
 
   <div class="tw">
     <table>
       <caption>외국인 전임교원 — QS &lsquo;외국인 교원(IFR)&rsquo; 항목과 대학알리미 실제 인원수 비교.</caption>
       <thead><tr>
-        <th>대학</th><th class="num">대학알리미 실제 인원(명)</th><th class="num">QS IFR 점수</th><th class="num">QS IFR 국내순위</th>
+        <th>대학</th><th class="num">대학알리미 인원(명)</th><th class="num">한성대 대비</th><th class="num">QS IFR 점수</th><th class="num">QS IFR 국내순위</th>
       </tr></thead>
       <tbody>
-        <tr><td>세종대학교</td><td class="num">86</td><td class="num">62.9</td><td class="num">7위</td></tr>
-        <tr><td>국민대학교</td><td class="num">52</td><td class="num">18.4</td><td class="num">55위</td></tr>
-        <tr><td>가천대학교</td><td class="num">167</td><td class="num">31.8</td><td class="num">36위</td></tr>
-        <tr><td>광운대학교</td><td class="num">21</td><td class="num">20.1</td><td class="num">52위</td></tr>
-        <tr><td>숭실대학교</td><td class="num">24</td><td class="num">15.0</td><td class="num">64위</td></tr>
-        <tr><td>명지대학교</td><td class="num">25</td><td class="num">15.8</td><td class="num">62위</td></tr>
-        <tr class="me"><td>한성대학교</td><td class="num">13</td><td class="num">12.3</td><td class="num">71위</td></tr>
-        <tr><td>상명대학교</td><td class="num">15</td><td class="num">8.0</td><td class="num">80위</td></tr>
+        <tr><td>세종대학교</td><td class="num">86</td><td class="num">+73명</td><td class="num">62.9</td><td class="num">7위</td></tr>
+        <tr><td>국민대학교</td><td class="num">52</td><td class="num">+39명</td><td class="num">18.4</td><td class="num">55위</td></tr>
+        <tr><td>가천대학교</td><td class="num">167</td><td class="num">+154명</td><td class="num">31.8</td><td class="num">36위</td></tr>
+        <tr><td>광운대학교</td><td class="num">21</td><td class="num">+8명</td><td class="num">20.1</td><td class="num">52위</td></tr>
+        <tr><td>숭실대학교</td><td class="num">24</td><td class="num">+11명</td><td class="num">15.0</td><td class="num">64위</td></tr>
+        <tr><td>명지대학교</td><td class="num">25</td><td class="num">+12명</td><td class="num">15.8</td><td class="num">62위</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">13</td><td class="num">기준</td><td class="num">12.3</td><td class="num">71위</td></tr>
+        <tr><td>상명대학교</td><td class="num">15</td><td class="num">+2명</td><td class="num">8.0</td><td class="num">80위</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="call">
-    <span class="ct">QS 결과와 겹치는 부분</span>
+  <div class="tw">
+    <table>
+      <caption>전임교원 1인당 연구비(교내+교외 합) — QS &lsquo;교원당 논문(PPF)&rsquo; 항목과 비교. 논문 편수 그 자체는 아니지만, 연구에 얼마나 투자하는지 보여주는 정부 공식 수치.</caption>
+      <thead><tr>
+        <th>대학</th><th class="num">대학알리미 연구비(만원)</th><th class="num">한성대 대비</th><th class="num">QS PPF 점수</th><th class="num">QS PPF 국내순위</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>세종대학교</td><td class="num">17,469</td><td class="num">5.4배</td><td class="num">71.5</td><td class="num">6위</td></tr>
+        <tr><td>국민대학교</td><td class="num">12,679</td><td class="num">3.9배</td><td class="num">8.4</td><td class="num">70위</td></tr>
+        <tr><td>가천대학교</td><td class="num">11,803</td><td class="num">3.7배</td><td class="num">18.3</td><td class="num">49위</td></tr>
+        <tr><td>광운대학교</td><td class="num">16,715</td><td class="num">5.2배</td><td class="num">47.3</td><td class="num">15위</td></tr>
+        <tr><td>숭실대학교</td><td class="num">10,483</td><td class="num">3.3배</td><td class="num">20.8</td><td class="num">45위</td></tr>
+        <tr><td>명지대학교</td><td class="num">8,409</td><td class="num">2.6배</td><td class="num">10.8</td><td class="num">64위</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">3,220</td><td class="num">기준</td><td class="num">5.3</td><td class="num">87위</td></tr>
+        <tr><td>상명대학교</td><td class="num">12,876</td><td class="num">4.0배</td><td class="num">11.2</td><td class="num">62위</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call good">
+    <span class="ct">가장 뚜렷한 발견</span>
     <ul class="brief">
-      <li>한성대 외국인 전임교원(13명)은 8개교 중 <b>가장 적음</b> — QS IFR 국내순위(71위)도 8개교 중 두 번째로 낮아 방향이 정확히 일치</li>
-      <li>정부에 신고한 실제 인원수에서도 같은 결과가 나온다는 것은, QS 점수가 현실을 잘 보여주고 있다는 뜻</li>
-      <li>즉 &lsquo;QS 점수만 낮은 것&rsquo;이 아니라 &lsquo;실제로 외국인 교원이 적은 것&rsquo; — [개선방향] 탭의 국제화 항목 확대가 QS 점수뿐 아니라 실제 학교 모습도 함께 바꿔줄 일</li>
+      <li>한성대 전임교원 1인당 연구비(3,220만원)는 8개교 중 <b>압도적 최하위</b> — 나머지 7개교는 전부 한성대의 2.6~5.4배</li>
+      <li>QS 논문(PPF) 점수도 8개교 중 <b>최하위(국내 87위)</b> — 연구비가 적으니 논문도 적게 나오는, 원인과 결과가 딱 맞아떨어지는 그림</li>
+      <li>즉 QS의 연구 항목 약점은 &lsquo;평가 방식의 불이익&rsquo;이 아니라 &lsquo;실제 연구 투자 규모&rsquo;의 문제 — [개선방향] 탭에서 국제공동연구를 우선순위로 둔 이유이기도 함(연구비를 늘리는 것보다 협력을 늘리는 쪽이 지금 여건에서 더 빠른 길)</li>
+    </ul>
+  </div>
+
+  <div class="call">
+    <span class="ct">QS 점수와 실제 수치, 얼마나 같이 움직일까</span>
+    <ul class="brief">
+      <li>8개교 사이에서 &lsquo;대학알리미 실제 순위&rsquo;와 &lsquo;QS 점수 순위&rsquo;가 얼마나 비슷한지 계산(0=전혀 안 맞음, 1=완전히 같음)</li>
+      <li>외국인 교원: <b>0.81</b> — 거의 그대로 일치. 실제 인원이 QS 점수를 잘 설명함</li>
+      <li>연구비: <b>0.71</b> — 꽤 강하게 일치. 연구비가 논문 점수를 상당 부분 설명함</li>
+      <li>학생수: <b>0.40</b> — 절반 정도만 일치. 국민대 사례처럼 QS FSR은 대학알리미의 단순 비율 말고 다른 계산도 섞여 있는 것으로 보임</li>
     </ul>
   </div>
 
   <div class="note">
-    <span class="note-label">참고</span>
+    <span class="note-label">참고 — 못 가져온 항목</span>
     <ul class="brief note-list">
-      <li>자료 출처: 대학알리미(www.academyinfo.go.kr) 2024년 공시자료, 공공데이터포털(data.go.kr) Open API로 조회</li>
-      <li>QS FSR·IFR 점수·국내순위는 [부록] QS 원자료를 기준으로 별도 계산, 모든 수치는 각 학교 본교 기준</li>
+      <li>국제공동연구망(IRN): 대학알리미에는 이 개념 자체가 없음 — QS 자체 설문·논문 데이터 기반 지표라 정부 공시와 짝지을 수 없음</li>
+      <li>외국인 학생·교환학생 유치/파견(ISR·IBX·OBX): 대학알리미에 관련 자료가 있을 가능성이 높지만, 지금 승인받은 5개 항목(대학 기본정보·재정 현황·교육여건 현황·교원·연구 현황·산학협력 현황)에는 포함돼 있지 않음 — &lsquo;학생 현황&rsquo; 계열 항목을 추가로 활용신청하면 확인 가능</li>
+      <li>피인용(CPP): 대학알리미는 논문 &lsquo;편수&rsquo;와 연구비까지는 공개하지만 &lsquo;인용 횟수&rsquo;는 추적하지 않음 — 이 항목은 QS 고유 데이터로 정부 공시와 비교 불가</li>
+      <li>자료 출처: 대학알리미(www.academyinfo.go.kr) 2024년 공시자료, 공공데이터포털(data.go.kr) Open API로 조회. QS 점수·국내순위는 [부록] QS 원자료 기준 별도 계산</li>
     </ul>
   </div>
 </section>
