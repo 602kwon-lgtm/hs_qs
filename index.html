@@ -233,6 +233,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <li><a class="rail-link" data-tab-trigger data-tab="forecast" href="#forecast"><span class="n">02</span><span>미래예측</span></a></li>
     <li><a class="rail-link" data-tab-trigger data-tab="plan" href="#plan"><span class="n">03</span><span>개선방향</span></a></li>
     <li><a class="rail-link" data-tab-trigger data-tab="appendix" href="#appendix"><span class="n">—</span><span>부록</span></a></li>
+    <li><a class="rail-link" data-tab-trigger data-tab="appendix2" href="#appendix2"><span class="n">—</span><span>부록2</span></a></li>
   </ol>
 </nav>
 
@@ -275,6 +276,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <button class="tab-btn" data-tab-trigger data-tab="forecast" type="button" role="tab" aria-selected="false"><span class="tn">02</span>미래예측</button>
     <button class="tab-btn" data-tab-trigger data-tab="plan" type="button" role="tab" aria-selected="false"><span class="tn">03</span>개선방향</button>
     <button class="tab-btn" data-tab-trigger data-tab="appendix" type="button" role="tab" aria-selected="false">부록</button>
+    <button class="tab-btn" data-tab-trigger data-tab="appendix2" type="button" role="tab" aria-selected="false">부록2</button>
   </div>
 </header>
 
@@ -790,7 +792,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
         <th>순위</th><th>영역</th><th class="num">현재</th><th class="num">목표</th><th class="num">총점 기여</th><th class="num">예상 상승(단독)</th><th>실행기간</th>
       </tr></thead>
       <tbody>
-        <tr><td>1순위</td><td>빠진 자료 채우기</td><td class="num">SWP 76.4</td><td class="num">90</td><td class="num">+0.7</td><td class="num" style="color:var(--good)">+33계단</td><td>0–6개월</td></tr>
+        <tr><td>1순위</td><td>제출 자료 점검</td><td class="num">—</td><td class="num">전 항목 제출 확인</td><td class="num">—</td><td class="num">감점 방지</td><td>0–3개월</td></tr>
         <tr class="me"><td>2순위</td><td>국제공동연구망</td><td class="num">IRN 3.1</td><td class="num">31</td><td class="num">+2.8</td><td class="num" style="color:var(--good)">+128계단</td><td>6–18개월</td></tr>
         <tr><td>3순위</td><td>연구 질·양</td><td class="num">CPP5.4·PPF5.3</td><td class="num">CPP26·PPF18</td><td class="num">+2.7</td><td class="num" style="color:var(--good)">+123계단</td><td>18–48개월</td></tr>
         <tr><td>4순위</td><td>국제화 4종</td><td class="num">국내 하위권</td><td class="num">국내 중간</td><td class="num">+1.1</td><td class="num" style="color:var(--good)">+53계단</td><td>12–24개월</td></tr>
@@ -802,13 +804,10 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <figure>
     <figcaption>
       <span class="ft">우선순위별 기대 효과</span>
-      <span class="fs">항목을 단독 실행했을 때 예상되는 아시아 순위 상승 계단 수</span>
+      <span class="fs">항목을 단독 실행했을 때 예상되는 아시아 순위 상승 계단 수 (1순위 점검 작업은 효과를 미리 계산하기 어려워 제외)</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
-        <div class="bar-row"><span class="bl"><b>1순위</b> 빠진 자료 채우기</span>
-          <span class="bar-track"><span class="bar-fill g" style="width:18.4%"><title>+33계단 · 0-6개월</title></span></span>
-          <span class="bv">+33</span></div>
         <div class="bar-row"><span class="bl"><b>2순위</b> 국제공동연구망</span>
           <span class="bar-track"><span class="bar-fill g" style="width:71.5%"><title>+128계단 · 단일 최대 효과</title></span></span>
           <span class="bv">+128</span></div>
@@ -836,15 +835,12 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   <div class="road">
 
     <div class="rd">
-      <div class="rd-h"><span class="p">1순위</span><h4>빠진 자료 채우기 — 가장 싸고 가장 빠른 점수</h4><span class="t">0–6개월</span></div>
-      <p>박사학위 교원 항목이 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있으나 미집계로 놓친 점수가 존재 — 자원 투입 없이 회수 가능한 영역.</p>
+      <div class="rd-h"><span class="p">1순위</span><h4>제출 자료 점검 — 가장 싸고 가장 빠른 확인</h4><span class="t">0–3개월</span></div>
+      <p>박사학위 교원 항목이 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있는데 제출 자료가 비어 있어서 놓친 점수가 있었음 — 돈 들이지 않고 확인만 하면 되는 일.</p>
       <ul>
-        <li>Scopus 소속기관 프로파일 정비 — 소속 표기 불일치(Hansung Univ. / 한성대 / Hansung University Seoul)로 누락된 논문 병합</li>
         <li>QS 연례 데이터 제출 항목 전수 점검 — 2026년 SWP처럼 빈칸으로 제출된 항목이 더 없는지 확인</li>
-        <li>박사학위 교원 비율 76.4 → 90 (국내 중간 87.0) — 신규 채용 요건 및 재직 교원 학위 정보 갱신</li>
-        <li>교환학생 파견 항목 변동(39.4 → 29.9) 원인 확인 — 실제 감소인지 집계 누락인지 점검</li>
       </ul>
-      <div class="kpi"><span>목표 <b>SWP 90</b></span><span>총점 기여 <b>+0.7</b></span><span>예상 <b>+33계단</b></span></div>
+      <div class="kpi"><span>점검 대상 <b>QS 제출 11개 항목</b></span><span>기대 효과 <b>빈칸 제출로 인한 감점 방지</b></span></div>
     </div>
 
     <div class="rd">
@@ -947,8 +943,6 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <button class="subtab-btn active" data-target="s9a" type="button"><span class="sn">가</span>총점은 어떻게 계산했나</button>
     <button class="subtab-btn" data-target="s9b" type="button"><span class="sn">나</span>비교 대상이 늘어나는 효과</button>
     <button class="subtab-btn" data-target="s9c" type="button"><span class="sn">다</span>한계 및 유의사항</button>
-    <button class="subtab-btn" data-target="s9d" type="button"><span class="sn">라</span>자료 출처</button>
-    <button class="subtab-btn" data-target="s9e" type="button"><span class="sn">마</span>부록2 · 대학알리미 비교</button>
   </div>
 
 <section id="s9a" class="sub-panel active">
@@ -1015,22 +1009,6 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       </tbody>
     </table>
   </div>
-</section>
-
-<section id="s9d" class="sub-panel">
-  <div class="sec-head"><span class="n">라</span><h2>자료 출처</h2></div>
-
-  <div class="tw">
-    <table>
-      <caption>분석에 사용한 QS World University Rankings: Asia 원자료 3개년.</caption>
-      <thead><tr><th>연도</th><th class="num">평가대상</th><th>기관 표기</th></tr></thead>
-      <tbody>
-        <tr><td>2024</td><td class="num">856개교</td><td>Hansung University Seoul</td></tr>
-        <tr><td>2025</td><td class="num">987개교</td><td>Hansung University Seoul</td></tr>
-        <tr class="me"><td>2026</td><td class="num">1,534개교</td><td>Hansung University Seoul · Republic of Korea</td></tr>
-      </tbody>
-    </table>
-  </div>
 
   <footer>
     <ul class="brief">
@@ -1040,50 +1018,70 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </footer>
 </section>
 
-<section id="s9e" class="sub-panel">
-  <div class="sec-head"><span class="n">마</span><h2>부록2 · 대학알리미로 다시 보기</h2></div>
+</div>
+<!-- ================= /TAB 부록 ================= -->
+
+<!-- ================= TAB : 부록2 ================= -->
+<div class="tab-panel" data-tab="appendix2">
+
+<section id="s10">
+  <div class="sec-head"><span class="n">—</span><h2>부록2 · 대학알리미로 다시 확인하기</h2></div>
 
   <ul class="brief lede">
     <li>대학알리미(대학정보공시)는 정부가 운영하는 대학 정보 공개 사이트 — 공공데이터포털 Open API로 학교별 실제 수치를 직접 조회</li>
-    <li>QS는 해외 평가기관이 매긴 점수, 대학알리미는 각 대학이 정부에 신고한 실제 운영 수치 — 두 가지를 같이 보면 더 정확한 그림이 나옴</li>
-    <li>비교 대상은 앞서 [현황] 탭에서 살펴본 경쟁 8개교, 2024년 공시 자료 기준</li>
+    <li>QS 항목 중 실제 정부 통계와 짝지을 수 있는 두 가지만 골라 <b>QS 점수·국내순위</b>와 <b>대학알리미 실제 수치</b>를 나란히 비교</li>
+    <li>비교 대상은 [현황] 탭에서 살펴본 경쟁 8개교, 2024년 자료 기준(QS는 2026년 발표 기준 2024년 제출 자료 사용)</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>대학알리미 2024년 공시자료 — 학생 1인당 등록금·장학금, 전임교원 확보율, 외국인 전임교원 수.</caption>
+      <caption>전임교원 1인당 학생수 — QS &lsquo;교원당 학생수(FSR)&rsquo; 항목과 대학알리미 실제 수치 비교. 국내순위는 103개 평가대학 기준.</caption>
       <thead><tr>
-        <th>대학</th><th class="num">등록금(연, 1인당)</th><th class="num">장학금(연, 1인당)</th>
-        <th class="num">전임교원 확보율</th><th class="num">외국인 전임교원</th>
+        <th>대학</th><th class="num">대학알리미 실제 학생수(명)</th><th class="num">QS FSR 점수</th><th class="num">QS FSR 국내순위</th>
       </tr></thead>
       <tbody>
-        <tr><td>세종대학교</td><td class="num">796.4만원</td><td class="num">317.6만원</td><td class="num">91.7%</td><td class="num">86명</td></tr>
-        <tr><td>국민대학교</td><td class="num">798.1만원</td><td class="num">377.2만원</td><td class="num">86.5%</td><td class="num">52명</td></tr>
-        <tr><td>가천대학교</td><td class="num">834.3만원</td><td class="num">345.3만원</td><td class="num">104.8%</td><td class="num">167명</td></tr>
-        <tr><td>광운대학교</td><td class="num">790.5만원</td><td class="num">322.0만원</td><td class="num">74.6%</td><td class="num">21명</td></tr>
-        <tr><td>숭실대학교</td><td class="num">797.9만원</td><td class="num">316.0만원</td><td class="num">76.3%</td><td class="num">24명</td></tr>
-        <tr><td>명지대학교</td><td class="num">811.4만원</td><td class="num">340.9만원</td><td class="num">76.9%</td><td class="num">25명</td></tr>
-        <tr class="me"><td>한성대학교</td><td class="num">778.1만원</td><td class="num">362.2만원</td><td class="num">84.1%</td><td class="num">13명</td></tr>
-        <tr><td>상명대학교</td><td class="num">796.5만원</td><td class="num">369.8만원</td><td class="num">80.1%</td><td class="num">15명</td></tr>
+        <tr><td>세종대학교</td><td class="num">29.90</td><td class="num">31.7</td><td class="num">52위</td></tr>
+        <tr><td>국민대학교</td><td class="num">30.49</td><td class="num">87.3</td><td class="num">25위</td></tr>
+        <tr><td>가천대학교</td><td class="num">26.27</td><td class="num">42.2</td><td class="num">46위</td></tr>
+        <tr><td>광운대학교</td><td class="num">32.90</td><td class="num">16.2</td><td class="num">81위</td></tr>
+        <tr><td>숭실대학교</td><td class="num">37.34</td><td class="num">24.2</td><td class="num">65위</td></tr>
+        <tr><td>명지대학교</td><td class="num">32.11</td><td class="num">31.4</td><td class="num">53위</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">30.67</td><td class="num">20.8</td><td class="num">72위</td></tr>
+        <tr><td>상명대학교</td><td class="num">28.68</td><td class="num">19.0</td><td class="num">77위</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="call good">
-    <span class="ct">좋은 소식</span>
-    <ul class="brief">
-      <li>한성대 등록금(778.1만원)은 8개교 중 <b>가장 저렴함</b></li>
-      <li>학생 1인당 장학금(362.2만원)은 8개교 중 <b>3위</b> — 낮은 등록금에 장학금까지 더해져 학생들이 부담하는 실질 비용은 8개교 중 가장 낮은 편</li>
-      <li>전임교원 확보율(84.1%)은 8개교 중 <b>4위</b>로 중간은 넘음 — 학생 수에 맞춰 있어야 할 전임교원을 꽤 채운 편</li>
-    </ul>
+  <ul class="brief">
+    <li>전임교원 1인당 학생수는 적을수록 좋음 — 한성대(30.67명)는 8개교 중 5위로 중간권, 가천대(26.27명)가 가장 여유 있음</li>
+    <li>다만 국민대는 실제 학생수(30.49명)가 한성대와 비슷한데도 QS FSR 점수는 훨씬 높음(87.3점, 25위) — QS 점수가 대학알리미의 단순 비율만으로 정해지지 않고, 다른 계산 방식이 섞여 있다는 뜻</li>
+  </ul>
+
+  <div class="tw">
+    <table>
+      <caption>외국인 전임교원 — QS &lsquo;외국인 교원(IFR)&rsquo; 항목과 대학알리미 실제 인원수 비교.</caption>
+      <thead><tr>
+        <th>대학</th><th class="num">대학알리미 실제 인원(명)</th><th class="num">QS IFR 점수</th><th class="num">QS IFR 국내순위</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>세종대학교</td><td class="num">86</td><td class="num">62.9</td><td class="num">7위</td></tr>
+        <tr><td>국민대학교</td><td class="num">52</td><td class="num">18.4</td><td class="num">55위</td></tr>
+        <tr><td>가천대학교</td><td class="num">167</td><td class="num">31.8</td><td class="num">36위</td></tr>
+        <tr><td>광운대학교</td><td class="num">21</td><td class="num">20.1</td><td class="num">52위</td></tr>
+        <tr><td>숭실대학교</td><td class="num">24</td><td class="num">15.0</td><td class="num">64위</td></tr>
+        <tr><td>명지대학교</td><td class="num">25</td><td class="num">15.8</td><td class="num">62위</td></tr>
+        <tr class="me"><td>한성대학교</td><td class="num">13</td><td class="num">12.3</td><td class="num">71위</td></tr>
+        <tr><td>상명대학교</td><td class="num">15</td><td class="num">8.0</td><td class="num">80위</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="call">
     <span class="ct">QS 결과와 겹치는 부분</span>
     <ul class="brief">
-      <li>외국인 전임교원 수(13명)는 8개교 중 <b>가장 적음</b> — QS의 &lsquo;외국인 교원&rsquo; 항목에서 나온 약점과 정확히 같은 방향</li>
-      <li>정부에 신고한 실제 수치에서도 같은 문제가 나온다는 것은, QS 점수가 현실을 잘 보여주고 있다는 뜻이기도 함</li>
-      <li>즉 &lsquo;점수만 낮은 것&rsquo;이 아니라 &lsquo;실제로 외국인 교원이 적은 것&rsquo; — 개선방향 탭의 국제화 항목 확대가 QS 점수뿐 아니라 실제 학교 모습도 함께 바꿔줄 일</li>
+      <li>한성대 외국인 전임교원(13명)은 8개교 중 <b>가장 적음</b> — QS IFR 국내순위(71위)도 8개교 중 두 번째로 낮아 방향이 정확히 일치</li>
+      <li>정부에 신고한 실제 인원수에서도 같은 결과가 나온다는 것은, QS 점수가 현실을 잘 보여주고 있다는 뜻</li>
+      <li>즉 &lsquo;QS 점수만 낮은 것&rsquo;이 아니라 &lsquo;실제로 외국인 교원이 적은 것&rsquo; — [개선방향] 탭의 국제화 항목 확대가 QS 점수뿐 아니라 실제 학교 모습도 함께 바꿔줄 일</li>
     </ul>
   </div>
 
@@ -1091,13 +1089,13 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <span class="note-label">참고</span>
     <ul class="brief note-list">
       <li>자료 출처: 대학알리미(www.academyinfo.go.kr) 2024년 공시자료, 공공데이터포털(data.go.kr) Open API로 조회</li>
-      <li>모든 수치는 각 학교 본교 기준, 만원 단위는 원 단위 공시값을 반올림해서 표시</li>
+      <li>QS FSR·IFR 점수·국내순위는 [부록] QS 원자료를 기준으로 별도 계산, 모든 수치는 각 학교 본교 기준</li>
     </ul>
   </div>
 </section>
 
 </div>
-<!-- ================= /TAB 부록 ================= -->
+<!-- ================= /TAB 부록2 ================= -->
 
 </main>
 </div>
@@ -1106,7 +1104,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 (function(){
   var triggers = document.querySelectorAll('[data-tab-trigger]');
   var panels = document.querySelectorAll('.tab-panel');
-  var validTabs = ['status','forecast','plan','appendix'];
+  var validTabs = ['status','forecast','plan','appendix','appendix2'];
 
   function resetSubtabs(panel){
     var buttons = panel.querySelectorAll(':scope > .subtabbar > .subtab-btn');
