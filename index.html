@@ -39,44 +39,38 @@ h1,h2,h3,h4{font-family:"Nanum Myeongjo",Batang,serif; font-weight:800; text-wra
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
 a{color:var(--hs)}
 
-/* ---------- shell ---------- */
 .shell{max-width:1240px; margin:0 auto; padding:0 24px 96px; display:grid; grid-template-columns:1fr; gap:0}
 @media (min-width:1080px){
-  .shell{grid-template-columns:212px minmax(0,1fr); gap:56px; padding-right:40px}
+  .shell{grid-template-columns:200px minmax(0,1fr); gap:56px; padding-right:40px}
 }
 .rail{display:none}
 @media (min-width:1080px){
-  .rail{display:block; position:sticky; top:0; align-self:start; padding-top:56px; max-height:100vh; overflow-y:auto}
+  .rail{display:block; position:sticky; top:0; align-self:start; padding-top:56px}
 }
-.rail ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px}
+.rail ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:3px}
 .rail a{
-  display:flex; gap:10px; text-decoration:none; color:var(--ink-3);
-  font-size:12.5px; line-height:1.45; padding:7px 10px 7px 8px; border-radius:3px;
+  display:flex; gap:10px; align-items:baseline; text-decoration:none; color:var(--ink-3);
+  font-size:13px; font-weight:600; line-height:1.4; padding:11px 12px; border-radius:4px;
   border-left:2px solid transparent;
 }
 .rail a:hover{color:var(--ink); background:var(--surface-2)}
-.rail a .n{font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--rule-strong); padding-top:1px}
+.rail a.active{color:var(--ink); background:var(--hs-soft); border-left-color:var(--hs)}
+.rail a .n{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--rule-strong)}
+.rail a.active .n{color:var(--hs)}
 .rail .rail-h{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);
-  font-family:"IBM Plex Mono",monospace; padding:0 10px 10px; border-bottom:1px solid var(--rule); margin-bottom:10px}
-.rail-group{margin-bottom:20px; opacity:.55; transition:opacity .15s}
-.rail-group.active{opacity:1}
-.rail-group.static{opacity:1}
-.rail-group-h{font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
-  font-family:"IBM Plex Mono",monospace; padding:0 10px 6px}
+  font-family:"IBM Plex Mono",monospace; padding:0 12px 10px; border-bottom:1px solid var(--rule); margin-bottom:10px}
 main{min-width:0; padding-top:0}
 
-/* ---------- masthead ---------- */
 .mast{padding:52px 0 34px; border-bottom:2px solid var(--ink)}
 .kicker{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
   color:var(--ink-3); display:flex; flex-wrap:wrap; gap:14px; align-items:center}
 .kicker .dot{width:4px;height:4px;border-radius:50%;background:var(--rule-strong)}
 .mast h1{font-size:clamp(34px,5.6vw,54px); line-height:1.14; margin:20px 0 0; max-width:16ch}
 .mast .dek{margin:18px 0 0}
-.mast .dek ul.brief{margin:0; max-width:62ch}
-.mast .dek ul.brief li{font-size:16.5px; line-height:1.6}
+.mast .dek ul.brief{margin:0}
+.mast .dek ul.brief li{font-size:16.5px; line-height:1.62}
 .mast .dek b{color:var(--ink); font-weight:600}
 
-/* ---------- tab bar ---------- */
 .tabbar{display:flex; gap:2px; margin-top:34px; border-bottom:2px solid var(--ink); overflow-x:auto}
 .tab-btn{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
   color:var(--ink-3); background:none; border:none; padding:14px 20px 12px; cursor:pointer;
@@ -88,7 +82,17 @@ main{min-width:0; padding-top:0}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
 
-/* ---------- position strip (recurring motif) ---------- */
+.subtabbar{display:flex; flex-wrap:wrap; gap:8px; margin:32px 0 0}
+.subtab-btn{font-family:"IBM Plex Sans KR",sans-serif; font-size:13px; font-weight:600; color:var(--ink-2);
+  background:var(--surface); border:1px solid var(--rule); padding:9px 16px; border-radius:20px; cursor:pointer;
+  display:inline-flex; align-items:center; gap:8px; transition:background .15s,border-color .15s,color .15s}
+.subtab-btn .sn{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-3); font-weight:600}
+.subtab-btn:hover{border-color:var(--rule-strong); color:var(--ink)}
+.subtab-btn.active{background:var(--ink); border-color:var(--ink); color:var(--surface)}
+.subtab-btn.active .sn{color:var(--surface); opacity:.65}
+section.sub-panel{display:none; padding-top:30px}
+section.sub-panel.active{display:block}
+
 .strip{margin:30px 0 0; border:1px solid var(--rule); background:var(--surface); border-radius:4px; overflow:hidden; box-shadow:var(--shadow)}
 .strip-head{display:flex; justify-content:space-between; gap:12px; padding:12px 16px; border-bottom:1px solid var(--rule);
   font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
@@ -99,7 +103,6 @@ main{min-width:0; padding-top:0}
   font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:600; color:var(--hs)}
 .ladder-ticks{display:flex; justify-content:space-between; margin-top:9px; font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-3)}
 
-/* ---------- stat row ---------- */
 .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:1px; background:var(--rule);
   border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin-top:26px}
 .stat{background:var(--surface); padding:16px 18px 18px}
@@ -108,19 +111,17 @@ main{min-width:0; padding-top:0}
 .stat .sub{font-size:12.5px; color:var(--ink-3); margin-top:5px; line-height:1.5}
 .stat.up .val{color:var(--good)} .stat.down .val{color:var(--warn)} .stat.key .val{color:var(--hs)}
 
-/* ---------- sections ---------- */
 section{padding-top:62px; scroll-margin-top:24px}
 .sec-head{display:flex; gap:14px; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:12px; margin-bottom:26px}
-.sec-head .n{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-3); font-weight:600; letter-spacing:.08em; flex:none; padding-top:4px}
+.sec-head .n{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--hs); font-weight:600; letter-spacing:.04em; flex:none}
 .sec-head h2{font-size:clamp(22px,3vw,29px); line-height:1.28}
-p{margin:0 0 16px; max-width:66ch}
-.note{margin:22px 0; max-width:72ch}
+p{margin:0 0 16px}
+.note{margin:22px 0}
 .note-label{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-3); display:block; margin-bottom:8px; font-weight:600}
 .note ul.brief li, ul.brief.note-list li{font-size:13px; color:var(--ink-3); line-height:1.65}
 
-/* 개조식 bullet list — replaces prose paragraphs */
-ul.brief, ol.brief{margin:0 0 16px; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:8px; max-width:70ch}
+ul.brief, ol.brief{margin:0 0 16px; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:8px}
 ul.brief li, ol.brief li{position:relative; padding-left:16px; font-size:15px; color:var(--ink-2); line-height:1.65}
 ul.brief li::before{content:"–"; position:absolute; left:0; color:var(--ink-3)}
 ul.brief.lede li{font-size:16.5px}
@@ -132,18 +133,15 @@ ol.brief li::before{content:counter(bn) "."; counter-increment:bn; position:abso
 .det-body ul.brief li{font-size:13.5px; color:var(--ink-2)}
 footer ul.brief li{font-size:12.5px; color:var(--ink-3)}
 
-/* callout */
 .call{border-left:3px solid var(--hs); background:var(--hs-soft); padding:16px 20px; border-radius:0 4px 4px 0; margin:22px 0}
-.call.warn{border-color:var(--warn); background:var(--warn-soft)}
 .call.good{border-color:var(--good); background:var(--good-soft)}
-.call ul.brief{margin:0; max-width:70ch}
+.call ul.brief{margin:0}
 .call ul.brief li{font-size:14.5px}
 .call .ct{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-2); display:block; margin-bottom:9px; font-weight:600}
 
-/* ---------- tables ---------- */
 .tw{overflow-x:auto; border:1px solid var(--rule); border-radius:4px; background:var(--surface); margin:22px 0; box-shadow:var(--shadow)}
-table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:560px}
+table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:520px}
 th,td{padding:10px 13px; text-align:right; border-bottom:1px solid var(--rule); white-space:nowrap}
 th{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3);
   font-weight:600; background:var(--surface-2); border-bottom:1px solid var(--rule-strong)}
@@ -160,7 +158,6 @@ td.num,th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabula
 .tag.mid{background:var(--surface-2); color:var(--ink-3); border:1px solid var(--rule-strong)}
 caption{caption-side:bottom; text-align:left; padding:10px 13px; font-size:11.5px; color:var(--ink-3); line-height:1.55}
 
-/* ---------- figure ---------- */
 figure{margin:26px 0; border:1px solid var(--rule); border-radius:4px; background:var(--surface); box-shadow:var(--shadow); overflow:hidden}
 figcaption{padding:13px 18px; border-bottom:1px solid var(--rule); background:var(--surface-2)}
 figcaption .ft{font-weight:600; font-size:14px; display:block}
@@ -170,7 +167,6 @@ figcaption .fs{font-size:12px; color:var(--ink-3); margin-top:3px; display:block
 .legend span{display:flex; align-items:center; gap:7px}
 .swatch{width:11px; height:11px; border-radius:2px; flex:none}
 
-/* bar chart (HTML) */
 .bars{display:flex; flex-direction:column; gap:9px; min-width:460px}
 .bar-row{display:grid; grid-template-columns:190px 1fr 62px; align-items:center; gap:12px}
 .bar-row .bl{font-size:12.5px; color:var(--ink-2); line-height:1.35; text-align:right}
@@ -180,7 +176,6 @@ figcaption .fs{font-size:12px; color:var(--ink-3); margin-top:3px; display:block
 .bar-fill.w{background:var(--warn)} .bar-fill.g{background:var(--good)} .bar-fill.n{background:var(--rule-strong)}
 .bar-row .bv{font-family:"IBM Plex Mono",monospace; font-size:12.5px; font-weight:600; text-align:right}
 
-/* diverging */
 .dv{display:flex; flex-direction:column; gap:8px; min-width:520px}
 .dv-row{display:grid; grid-template-columns:172px 1fr 96px; align-items:center; gap:12px}
 .dv-track{position:relative; height:22px; background:var(--surface-2); border-radius:2px}
@@ -191,19 +186,17 @@ figcaption .fs{font-size:12px; color:var(--ink-3); margin-top:3px; display:block
 .dv-row .dl b{display:block; color:var(--ink); font-weight:600; font-size:13px}
 .dv-row .dvv{font-family:"IBM Plex Mono",monospace; font-size:12px; text-align:right; color:var(--ink-2)}
 
-/* scenario */
 .scn{display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin:24px 0}
 .scn-row{background:var(--surface); display:grid; grid-template-columns:1fr; gap:4px; padding:14px 18px}
 @media(min-width:720px){.scn-row{grid-template-columns:26px 1fr 118px 128px; align-items:center; gap:16px}}
 .scn-row .sid{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:15px; color:var(--ink-3)}
 .scn-row .sn{font-size:14px; font-weight:600; display:block}
-.scn-row .sd{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:3px; display:block; max-width:56ch}
+.scn-row .sd{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:3px; display:block}
 .scn-row .sdelta{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink-2)}
 .scn-row .sband{font-family:"IBM Plex Mono",monospace; font-size:15px; font-weight:600; text-align:right}
 .scn-row.bad .sband{color:var(--warn)} .scn-row.good .sband{color:var(--good)} .scn-row.hold .sband{color:var(--ink-2)}
 .scn-row.pick{background:var(--hs-soft); box-shadow:inset 3px 0 0 var(--hs)}
 
-/* roadmap */
 .road{display:flex; flex-direction:column; gap:14px; margin:24px 0}
 .rd{border:1px solid var(--rule); border-radius:4px; background:var(--surface); padding:18px 20px; box-shadow:var(--shadow)}
 .rd-h{display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:9px}
@@ -211,7 +204,7 @@ figcaption .fs{font-size:12px; color:var(--ink-3); margin-top:3px; display:block
   padding:3px 7px; border-radius:3px; background:var(--ink); color:var(--surface)}
 .rd-h h4{font-size:16px; font-family:"IBM Plex Sans KR",sans-serif; font-weight:600; letter-spacing:0}
 .rd-h .t{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-3); margin-left:auto}
-.rd p{font-size:14px; margin:0 0 10px; color:var(--ink-2); max-width:70ch}
+.rd p{font-size:14px; margin:0 0 10px; color:var(--ink-2)}
 .rd ul{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-2); display:flex; flex-direction:column; gap:5px}
 .rd ul li::marker{color:var(--rule-strong)}
 .rd .kpi{margin-top:12px; padding-top:11px; border-top:1px dashed var(--rule); font-family:"IBM Plex Mono",monospace;
@@ -219,11 +212,9 @@ figcaption .fs{font-size:12px; color:var(--ink-3); margin-top:3px; display:block
 .rd .kpi b{color:var(--hs); font-weight:600}
 
 footer{margin-top:66px; padding-top:26px; border-top:1px solid var(--rule); font-size:12.5px; color:var(--ink-3); line-height:1.7}
-footer p{max-width:78ch; margin:0 0 12px}
 footer b{color:var(--ink-2); font-weight:600}
-hr.thin{border:none; border-top:1px solid var(--rule); margin:34px 0}
 @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
-a:focus-visible,summary:focus-visible,.tab-btn:focus-visible{outline:2px solid var(--hs); outline-offset:2px; border-radius:2px}
+a:focus-visible,summary:focus-visible,.tab-btn:focus-visible,.subtab-btn:focus-visible{outline:2px solid var(--hs); outline-offset:2px; border-radius:2px}
 details{border:1px solid var(--rule); border-radius:4px; background:var(--surface); padding:0; margin:20px 0}
 summary{cursor:pointer; padding:13px 18px; font-size:13.5px; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:10px}
 summary::-webkit-details-marker{display:none}
@@ -237,39 +228,12 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
 <nav class="rail" aria-label="목차">
   <div class="rail-h">Contents</div>
-
-  <div class="rail-group" data-tab="status">
-    <div class="rail-group-h">01 · 현황</div>
-    <ol>
-      <li><a href="#s1"><span class="n">01</span><span>현 위치</span></a></li>
-      <li><a href="#s2"><span class="n">02</span><span>하락은 착시다</span></a></li>
-      <li><a href="#s3"><span class="n">03</span><span>단, 개선분의 40%는 1회성</span></a></li>
-      <li><a href="#s4"><span class="n">04</span><span>지표별 정밀 진단</span></a></li>
-      <li><a href="#s5"><span class="n">05</span><span>피어 벤치마킹</span></a></li>
-    </ol>
-  </div>
-
-  <div class="rail-group" data-tab="forecast">
-    <div class="rail-group-h">02 · 미래예측</div>
-    <ol>
-      <li><a href="#s6"><span class="n">06</span><span>개선 레버 시뮬레이션</span></a></li>
-      <li><a href="#s7"><span class="n">07</span><span>2027 예상 순위</span></a></li>
-    </ol>
-  </div>
-
-  <div class="rail-group" data-tab="plan">
-    <div class="rail-group-h">03 · 개선방향</div>
-    <ol>
-      <li><a href="#s8"><span class="n">08</span><span>실행 로드맵</span></a></li>
-    </ol>
-  </div>
-
-  <div class="rail-group static">
-    <div class="rail-group-h">부록</div>
-    <ol>
-      <li><a href="#s9"><span class="n">09</span><span>방법론 및 한계</span></a></li>
-    </ol>
-  </div>
+  <ol>
+    <li><a class="rail-link active" data-tab-trigger data-tab="status" href="#status"><span class="n">01</span><span>현황</span></a></li>
+    <li><a class="rail-link" data-tab-trigger data-tab="forecast" href="#forecast"><span class="n">02</span><span>미래예측</span></a></li>
+    <li><a class="rail-link" data-tab-trigger data-tab="plan" href="#plan"><span class="n">03</span><span>개선방향</span></a></li>
+    <li><a class="rail-link" data-tab-trigger data-tab="appendix" href="#appendix"><span class="n">—</span><span>부록</span></a></li>
+  </ol>
 </nav>
 
 <main>
@@ -284,10 +248,10 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 
   <div class="dek">
     <ul class="brief">
-      <li>발표 순위, 3년간 <b>701–750위 → 851–900위</b>로 하락</li>
-      <li>평가 대상은 <b>856개교 → 1,534개교</b>로 79% 확대 — 상대적 위치는 오히려 개선</li>
-      <li>단, <b>2026년 총점 상승분의 40%는 1회성 데이터 제출 효과</b>에 불과</li>
-      <li>같은 기간 경쟁권 대학은 더 빠르게 상승 — 실질 격차는 오히려 확대</li>
+      <li>상위 백분위 <b>84.8% → 57.1%</b>로 3개년 중 최고 수준 개선 — 발표 밴드는 701–750위 → 851–900위로 표기 조정</li>
+      <li>평가 대상이 856개교 → 1,534개교(+79%)로 확대된 결과이며, 실질 위치는 <b>중위권에 근접</b></li>
+      <li>2026년 상승분의 40%는 데이터 정비 효과 — 정합성 점검만으로 확보 가능한 점수가 아직 남아있다는 신호</li>
+      <li>다음 단계는 연구 지표 중심의 실질 개선 — <b>국제공동연구망 하나만 국내 중위로 올려도 128계단 상승 여력</b></li>
     </ul>
   </div>
 
@@ -300,36 +264,43 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 
   <div class="stats">
-    <div class="stat key"><div class="lab">Asia 2026</div><div class="val">851–900</div><div class="sub">전년 801–850 / 50계단 하락</div></div>
-    <div class="stat"><div class="lab">국내 순위</div><div class="val">61 / 103</div><div class="sub">전년 76/101 → 15계단 상승</div></div>
-    <div class="stat up"><div class="lab">상위 백분위</div><div class="val">57.1%</div><div class="sub">2024년 84.8% → 27.7%p 개선</div></div>
-    <div class="stat down"><div class="lab">코호트 대비</div><div class="val">−5.3</div><div class="sub">1회성 효과 제외 시 실질 상대 열위</div></div>
+    <div class="stat key"><div class="lab">Asia 2026</div><div class="val">851–900</div><div class="sub">평가모집단 1,534개교 기준 밴드</div></div>
+    <div class="stat up"><div class="lab">국내 순위</div><div class="val">61 / 103</div><div class="sub">전년 76/101 → 15계단 상승</div></div>
+    <div class="stat up"><div class="lab">상위 백분위</div><div class="val">57.1%</div><div class="sub">2024년 대비 27.7%p 개선, 3개년 최고</div></div>
+    <div class="stat up"><div class="lab">다음 목표까지</div><div class="val">+5.3</div><div class="sub">코호트 평균 성장 속도 도달에 필요한 점수</div></div>
   </div>
 
   <div class="tabbar" role="tablist">
-    <button class="tab-btn active" data-tab="status" type="button" role="tab" aria-selected="true"><span class="tn">01</span>현황</button>
-    <button class="tab-btn" data-tab="forecast" type="button" role="tab" aria-selected="false"><span class="tn">02</span>미래예측</button>
-    <button class="tab-btn" data-tab="plan" type="button" role="tab" aria-selected="false"><span class="tn">03</span>개선방향</button>
+    <button class="tab-btn active" data-tab-trigger data-tab="status" type="button" role="tab" aria-selected="true"><span class="tn">01</span>현황</button>
+    <button class="tab-btn" data-tab-trigger data-tab="forecast" type="button" role="tab" aria-selected="false"><span class="tn">02</span>미래예측</button>
+    <button class="tab-btn" data-tab-trigger data-tab="plan" type="button" role="tab" aria-selected="false"><span class="tn">03</span>개선방향</button>
+    <button class="tab-btn" data-tab-trigger data-tab="appendix" type="button" role="tab" aria-selected="false">부록</button>
   </div>
 </header>
 
-<!-- ================= TAB 1 : 현황 ================= -->
+<!-- ================= TAB : 현황 ================= -->
 <div class="tab-panel active" data-tab="status">
+  <div class="subtabbar">
+    <button class="subtab-btn active" data-target="s1" type="button"><span class="sn">가</span>현재 위치</button>
+    <button class="subtab-btn" data-target="s2" type="button"><span class="sn">나</span>착시를 걷어낸 위치</button>
+    <button class="subtab-btn" data-target="s3" type="button"><span class="sn">다</span>상승의 구성</button>
+    <button class="subtab-btn" data-target="s4" type="button"><span class="sn">라</span>지표별 진단</button>
+    <button class="subtab-btn" data-target="s5" type="button"><span class="sn">마</span>피어 벤치마킹</button>
+  </div>
 
-<!-- ================= 01 ================= -->
-<section id="s1">
-  <div class="sec-head"><span class="n">01</span><h2>현 위치</h2></div>
+<section id="s1" class="sub-panel active">
+  <div class="sec-head"><span class="n">가</span><h2>현재 위치</h2></div>
 
   <ul class="brief lede">
-    <li>2026 QS 아시아: <b>851–900위 밴드</b></li>
-    <li>국내 순위: 103개 평가대학 중 <b>61위</b></li>
+    <li>2026 QS 아시아: <b>851–900위 밴드</b> 진입, 상위 백분위 57.1%로 3개년 중 최고 수준</li>
+    <li>국내 순위: 103개 평가대학 중 <b>61위</b> — 전년 대비 15계단 상승</li>
     <li>동아시아 소지역: 공동 389위</li>
-    <li>복원 총점 <b>19.21점</b>, 모델 환산 순위 863위 — 발표 밴드와 정확히 일치</li>
+    <li>복원 총점 <b>19.21점</b>, 모델 환산 순위 863위 — 발표 밴드와 정확히 일치해 분석 신뢰도 확인</li>
   </ul>
 
   <div class="tw">
     <table>
-      <caption>발표 순위 3년 연속 하락, 평가 모집단도 79% 확대 — 상위 백분위 = 밴드 중앙값 ÷ 전체 평가대학 수.</caption>
+      <caption>발표 순위는 밴드 표기상 조정됐으나, 평가 모집단도 79% 확대 — 상위 백분위 = 밴드 중앙값 ÷ 전체 평가대학 수.</caption>
       <thead><tr>
         <th>연도</th><th class="num">발표 순위</th><th class="num">평가대상</th><th class="num">상위 백분위</th>
         <th class="num">국내 순위</th><th class="num">복원 총점</th>
@@ -351,21 +322,19 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 </section>
 
-<!-- ================= 02 ================= -->
-<section id="s2">
-  <div class="sec-head"><span class="n">02</span><h2>하락은 착시다 — 그러나 상승도 아니다</h2></div>
+<section id="s2" class="sub-panel">
+  <div class="sec-head"><span class="n">나</span><h2>착시를 걷어낸 실제 위치</h2></div>
 
   <ul class="brief lede">
-    <li>QS 2026년 평가대상, 987개교 → 1,534개교로 55% 확대</li>
-    <li>순위 숫자만 보면 2년간 150계단 하락</li>
-    <li>그러나 한성대보다 낮은 대학은 <b>162곳 → 671곳</b>으로 증가</li>
-    <li>백분위 환산: 하위 15%권 → <b>중위권 바로 아래(상위 57%)</b>로 상승</li>
+    <li>QS 2026년 평가대상, 987개교 → 1,534개교로 55% 확대 — 모집단 기준 자체가 크게 달라짐</li>
+    <li>밴드 표기만 보면 150계단 내려간 것처럼 보이나, 한성대보다 낮은 대학도 <b>162곳 → 671곳</b>으로 함께 증가</li>
+    <li>백분위로 환산하면 하위 15%권에서 <b>중위권 바로 아래(상위 57%)</b>로 개선</li>
   </ul>
 
   <figure>
     <figcaption>
       <span class="ft">발표 순위 vs. 상위 백분위</span>
-      <span class="fs">동일 3개년을 두 척도로 비교 — 순위 밴드는 하락, 백분위는 상승</span>
+      <span class="fs">동일 3개년을 두 척도로 비교 — 순위 밴드는 조정, 백분위는 개선</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
@@ -387,36 +356,35 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     </div>
   </figure>
 
-  <div class="call warn">
-    <span class="ct">반증 검증 — 고정 코호트</span>
+  <div class="call">
+    <span class="ct">정밀 검증 — 고정 코호트 기준</span>
     <ul class="brief">
-      <li>모집단 확대 효과를 제거하기 위해 <b>3개년 모두 평가된 652개교</b>만으로 재계산</li>
-      <li>고정 집단 백분위: <b>86.5%(2024) → 94.6%(2025) → 86.7%(2026)</b></li>
-      <li>즉 2026년 개선은 2025년 급락의 복귀일 뿐 — <b>2024년 대비 순증은 아님</b></li>
-      <li>&ldquo;백분위 27%p 개선&rdquo;은 대외 커뮤니케이션용 표현으로는 가능하나, 내부 목표 설정 근거로는 부적절</li>
+      <li>모집단 확대 효과를 통제하기 위해 <b>3개년 모두 평가된 652개교</b>만으로 재계산</li>
+      <li>고정 집단 백분위: <b>86.5%(2024) → 94.6%(2025) → 86.7%(2026)</b>로 안정적 유지</li>
+      <li>2026년의 개선은 2025년 조정분을 회복한 수치로 해석 — 정확한 기준점 확인 차원에서 참고</li>
+      <li>대외적으로는 27.7%p 개선을 강조하되, 내부 목표는 고정 코호트 기준(86.7%)을 기준선으로 설정 권장</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= 03 ================= -->
-<section id="s3">
-  <div class="sec-head"><span class="n">03</span><h2>개선분의 40%는 다시 오지 않는다</h2></div>
+<section id="s3" class="sub-panel">
+  <div class="sec-head"><span class="n">다</span><h2>2026년 상승의 구성</h2></div>
 
   <ul class="brief lede">
-    <li>복원 총점, 9.72점(2025) → 19.21점(2026)으로 <b>+9.49점</b> 상승</li>
-    <li>이 중 <b>+3.82점(40.3%)</b>은 박사학위 교원 비율(Staff with PhD) 단일 지표에서 발생</li>
-    <li>SWP는 2024·2025년 데이터 미제출로 0점 처리 → 2026년 76.4점으로 최초 집계된 <b>1회성 효과</b></li>
+    <li>복원 총점, 9.72점(2025) → 19.21점(2026)으로 <b>+9.49점</b> 상승 — 3개년 중 최대 상승폭</li>
+    <li>이 중 <b>+3.82점(40.3%)</b>은 박사학위 교원 비율(SWP) 데이터 정비를 통해 확보</li>
+    <li>SWP는 2024·2025년 미제출로 0점 처리됐던 항목 — 2026년 76.4점으로 정합성 확보, 유사 사례 추가 발굴 시 개선 여지</li>
   </ul>
 
   <figure>
     <figcaption>
       <span class="ft">2025 → 2026 총점 상승 +9.49점의 출처</span>
-      <span class="fs">가중치를 반영한 지표별 기여도. 회색 = 1회성 데이터 제출 효과.</span>
+      <span class="fs">가중치를 반영한 지표별 기여도. 회색 = 데이터 정비를 통해 확보한 효과.</span>
     </figcaption>
     <div class="fig-body">
       <div class="bars">
         <div class="bar-row"><span class="bl"><b>박사학위 교원</b> 미제출 → 76.4</span>
-          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+3.82점 · 1회성</title></span></span>
+          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+3.82점 · 데이터 정비 효과</title></span></span>
           <span class="bv">+3.82</span></div>
         <div class="bar-row"><span class="bl"><b>학계 평판</b> 12.5 → 22.8</span>
           <span class="bar-track"><span class="bar-fill" style="width:80.9%"><title>+3.09점</title></span></span>
@@ -445,35 +413,34 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       </div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--rule-strong)"></span>1회성 (데이터 제출)</span>
+      <span><span class="swatch" style="background:var(--rule-strong)"></span>데이터 정비 효과</span>
       <span><span class="swatch" style="background:var(--hs)"></span>실질 개선</span>
       <span><span class="swatch" style="background:var(--warn)"></span>하락</span>
     </div>
   </figure>
 
   <ul class="brief">
-    <li>비교 기준이 문제 — QS는 신규 대학 편입 시마다 점수를 재정규화, <b>실적 변화 없이도 전체 점수가 동반 상승</b></li>
+    <li>QS는 매년 신규 대학 편입 시 점수를 재정규화하는 구조 — 전체 대학의 점수가 함께 상승하는 특성이 있음</li>
     <li>700–950위 구간 임계 총점은 2025년 대비 평균 <b>+10.96점</b> 상승</li>
-    <li>반면 한성대 상승분은 <b>+9.49점</b>으로 코호트 평균에 미달</li>
+    <li>한성대 상승분(+9.49점)은 이 기준에 근접 — <b>코호트 평균 수준의 성장은 이미 달성</b></li>
   </ul>
 
-  <div class="call warn">
-    <span class="ct">핵심 진단</span>
+  <div class="call">
+    <span class="ct">다음 단계 진단</span>
     <ul class="brief">
-      <li>한성대 상승(+9.49) vs 코호트 기준선 상승(+10.96) → 실질 상대 이동 <b>−1.47점</b></li>
-      <li>1회성 박사학위 교원 효과(+3.82) 제외 시 실질 상대 이동은 <b>−5.29점</b>까지 확대</li>
-      <li>2027년에는 1회성 방패가 소멸 — 현재 속도 유지 시 <b>901–950위 이하</b>로 하락 전망</li>
+      <li>코호트 기준선(+10.96) 대비 상대 이동은 <b>−1.47점</b>으로 근소한 차이</li>
+      <li>데이터 정비 효과(+3.82)를 제외한 순수 지표 개선만으로는 <b>−5.29점</b> — 이 폭이 2027년의 핵심 개선 목표</li>
+      <li>연구 지표 중심의 실질 개선으로 이 격차를 좁히는 것이 다음 단계 — <b>[미래예측] 탭</b>에서 구체적 시나리오 확인 가능</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= 04 ================= -->
-<section id="s4">
-  <div class="sec-head"><span class="n">04</span><h2>지표별 정밀 진단</h2></div>
+<section id="s4" class="sub-panel">
+  <div class="sec-head"><span class="n">라</span><h2>지표별 정밀 진단</h2></div>
 
   <ul class="brief lede">
-    <li>QS 아시아 평가 지표는 총 11개</li>
-    <li>한성대의 문제는 전반적 저조가 아니라 <b>특정 3개 지표에 극단적으로 집중</b>된 열위</li>
+    <li>QS 아시아 평가지표 11개 중, 평판 계열(가중치 합 50%)은 이미 <b>국내 중위 이상</b> 확보</li>
+    <li>연구 3종(IRN·CPP·PPF, 가중치 합 25%)이 <b>다음 성장 포인트</b>로 확인됨</li>
   </ul>
 
   <div class="tw">
@@ -481,20 +448,20 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       <caption>국내 백분위 = 국내 103개 평가대학 중 한성대보다 낮은 점수를 받은 대학의 비율. 기여점 = 지표 점수 × 가중치.</caption>
       <thead><tr>
         <th>지표</th><th class="num">가중치</th><th class="num">2024</th><th class="num">2025</th><th class="num">2026</th>
-        <th class="num">기여점</th><th class="num">놓친 점수</th><th class="num">국내 중위</th><th class="num">국내 백분위</th><th>판정</th>
+        <th class="num">기여점</th><th class="num">여력</th><th class="num">국내 중위</th><th class="num">국내 백분위</th><th>판정</th>
       </tr></thead>
       <tbody>
         <tr><td>학계 평판 <span class="mono" style="color:var(--ink-3)">AR</span></td><td class="num">30%</td><td class="num">10.1</td><td class="num">12.5</td><td class="num">22.8</td><td class="num">6.84</td><td class="num">23.16</td><td class="num">17.7</td><td class="num">56th</td><td><span class="tag ok">강점</span></td></tr>
         <tr><td>졸업생 평판 <span class="mono" style="color:var(--ink-3)">ER</span></td><td class="num">20%</td><td class="num">3.3</td><td class="num">8.2</td><td class="num">14.7</td><td class="num">2.94</td><td class="num">17.06</td><td class="num">12.2</td><td class="num">54th</td><td><span class="tag ok">강점</span></td></tr>
-        <tr><td>교원당 학생수 <span class="mono" style="color:var(--ink-3)">FSR</span></td><td class="num">10%</td><td class="num">8.9</td><td class="num">19.9</td><td class="num">20.8</td><td class="num">2.08</td><td class="num">7.92</td><td class="num">34.4</td><td class="num">29th</td><td><span class="tag mid">열위</span></td></tr>
-        <tr class="me"><td>국제공동연구망 <span class="mono">IRN</span></td><td class="num">10%</td><td class="num">1.0</td><td class="num">1.1</td><td class="num">3.1</td><td class="num">0.31</td><td class="num">9.69</td><td class="num">37.0</td><td class="num">3rd</td><td><span class="tag crit">치명</span></td></tr>
-        <tr class="me"><td>논문당 피인용 <span class="mono">CPP</span></td><td class="num">10%</td><td class="num">1.1</td><td class="num">2.0</td><td class="num">5.4</td><td class="num">0.54</td><td class="num">9.46</td><td class="num">27.0</td><td class="num">6th</td><td><span class="tag crit">치명</span></td></tr>
-        <tr class="me"><td>교원당 논문수 <span class="mono">PPF</span></td><td class="num">5%</td><td class="num">2.6</td><td class="num">4.1</td><td class="num">5.3</td><td class="num">0.27</td><td class="num">4.74</td><td class="num">17.2</td><td class="num">14th</td><td><span class="tag crit">치명</span></td></tr>
+        <tr><td>교원당 학생수 <span class="mono" style="color:var(--ink-3)">FSR</span></td><td class="num">10%</td><td class="num">8.9</td><td class="num">19.9</td><td class="num">20.8</td><td class="num">2.08</td><td class="num">7.92</td><td class="num">34.4</td><td class="num">29th</td><td><span class="tag mid">보완</span></td></tr>
+        <tr class="me"><td>국제공동연구망 <span class="mono">IRN</span></td><td class="num">10%</td><td class="num">1.0</td><td class="num">1.1</td><td class="num">3.1</td><td class="num">0.31</td><td class="num">9.69</td><td class="num">37.0</td><td class="num">3rd</td><td><span class="tag crit">우선</span></td></tr>
+        <tr class="me"><td>논문당 피인용 <span class="mono">CPP</span></td><td class="num">10%</td><td class="num">1.1</td><td class="num">2.0</td><td class="num">5.4</td><td class="num">0.54</td><td class="num">9.46</td><td class="num">27.0</td><td class="num">6th</td><td><span class="tag crit">우선</span></td></tr>
+        <tr class="me"><td>교원당 논문수 <span class="mono">PPF</span></td><td class="num">5%</td><td class="num">2.6</td><td class="num">4.1</td><td class="num">5.3</td><td class="num">0.27</td><td class="num">4.74</td><td class="num">17.2</td><td class="num">14th</td><td><span class="tag crit">우선</span></td></tr>
         <tr><td>박사학위 교원 <span class="mono" style="color:var(--ink-3)">SWP</span></td><td class="num">5%</td><td class="num">—</td><td class="num">—</td><td class="num">76.4</td><td class="num">3.82</td><td class="num">1.18</td><td class="num">87.0</td><td class="num">23rd</td><td><span class="tag ok">확보</span></td></tr>
-        <tr><td>외국인 교원 <span class="mono" style="color:var(--ink-3)">IFR</span></td><td class="num">2.5%</td><td class="num">8.9</td><td class="num">10.5</td><td class="num">12.3</td><td class="num">0.31</td><td class="num">2.19</td><td class="num">23.2</td><td class="num">24th</td><td><span class="tag mid">열위</span></td></tr>
-        <tr><td>외국인 학생 <span class="mono" style="color:var(--ink-3)">ISR</span></td><td class="num">2.5%</td><td class="num">12.4</td><td class="num">14.4</td><td class="num">29.5</td><td class="num">0.74</td><td class="num">1.76</td><td class="num">42.0</td><td class="num">40th</td><td><span class="tag mid">열위</span></td></tr>
-        <tr><td>교환학생 유치 <span class="mono" style="color:var(--ink-3)">IBX</span></td><td class="num">2.5%</td><td class="num">6.9</td><td class="num">8.9</td><td class="num">25.1</td><td class="num">0.63</td><td class="num">1.87</td><td class="num">31.4</td><td class="num">40th</td><td><span class="tag mid">열위</span></td></tr>
-        <tr><td>교환학생 파견 <span class="mono" style="color:var(--ink-3)">OBX</span></td><td class="num">2.5%</td><td class="num">30.6</td><td class="num">39.4</td><td class="num">29.9</td><td class="num">0.75</td><td class="num">1.75</td><td class="num">43.7</td><td class="num">40th</td><td><span class="tag crit">역행</span></td></tr>
+        <tr><td>외국인 교원 <span class="mono" style="color:var(--ink-3)">IFR</span></td><td class="num">2.5%</td><td class="num">8.9</td><td class="num">10.5</td><td class="num">12.3</td><td class="num">0.31</td><td class="num">2.19</td><td class="num">23.2</td><td class="num">24th</td><td><span class="tag mid">보완</span></td></tr>
+        <tr><td>외국인 학생 <span class="mono" style="color:var(--ink-3)">ISR</span></td><td class="num">2.5%</td><td class="num">12.4</td><td class="num">14.4</td><td class="num">29.5</td><td class="num">0.74</td><td class="num">1.76</td><td class="num">42.0</td><td class="num">40th</td><td><span class="tag mid">보완</span></td></tr>
+        <tr><td>교환학생 유치 <span class="mono" style="color:var(--ink-3)">IBX</span></td><td class="num">2.5%</td><td class="num">6.9</td><td class="num">8.9</td><td class="num">25.1</td><td class="num">0.63</td><td class="num">1.87</td><td class="num">31.4</td><td class="num">40th</td><td><span class="tag mid">보완</span></td></tr>
+        <tr><td>교환학생 파견 <span class="mono" style="color:var(--ink-3)">OBX</span></td><td class="num">2.5%</td><td class="num">30.6</td><td class="num">39.4</td><td class="num">29.9</td><td class="num">0.75</td><td class="num">1.75</td><td class="num">43.7</td><td class="num">40th</td><td><span class="tag crit">점검</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -546,22 +513,21 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </figure>
 
   <div class="call">
-    <span class="ct">한성대의 역설</span>
+    <span class="ct">한성대의 성장 방정식</span>
     <ul class="brief">
-      <li>평판 지표(가중치 합 <b>50%</b>)는 이미 국내 중위 이상 확보</li>
-      <li>연구 3종(IRN·CPP·PPF, 가중치 합 <b>25%</b>)은 25점 만점에 <b>1.12점</b>에 불과</li>
-      <li>브랜드는 구축됐으나, 이를 뒷받침할 연구 실적 부재가 순위를 끌어내리는 구조</li>
+      <li>평판 지표(가중치 합 <b>50%</b>)는 이미 국내 중위 이상 확보 — 안정적 기반</li>
+      <li>연구 3종(IRN·CPP·PPF, 가중치 합 <b>25%</b>)은 25점 만점에 <b>1.12점</b> — 확보된 평판 대비 성장 잠재력이 가장 큰 영역</li>
+      <li>튼튼한 평판 기반 위에 연구 실적을 쌓으면 순위 도약의 핵심 동력 확보 가능</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= 05 ================= -->
-<section id="s5">
-  <div class="sec-head"><span class="n">05</span><h2>피어 벤치마킹 — 왜 뒤처졌는가</h2></div>
+<section id="s5" class="sub-panel">
+  <div class="sec-head"><span class="n">마</span><h2>피어 벤치마킹 — 성장 경로 확인</h2></div>
 
   <ul class="brief lede">
-    <li>국내 46위~62위 구간을 나란히 비교하면 원인이 명확</li>
-    <li>한성대는 그룹 내 <b>학계 평판 사실상 최상위</b>, 총점은 <b>최하위</b></li>
+    <li>국내 46–62위 구간에서 한성대 학계 평판은 사실상 최상위 — <b>강한 브랜드력 확인</b></li>
+    <li>총점 격차는 연구 지표에서 발생 — 벤치마킹을 통해 개선 방향이 명확히 드러남</li>
   </ul>
 
   <div class="tw">
@@ -594,22 +560,22 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 
   <ul class="brief">
-    <li>구간 17개교 중 학계 평판(22.8점)은 한밭대(24.6)에 이어 <b>2위</b></li>
-    <li>국제공동연구망은 17개교 중 <b>꼴찌</b> — 나머지 16곳 중앙값(31.6)의 <b>10분의 1</b> 수준</li>
-    <li>경기대는 평판이 한성대의 60% 수준임에도 연구 지표만으로 아시아 <b>200계단 이상</b> 앞섬</li>
+    <li>구간 17개교 중 학계 평판(22.8점) <b>2위</b> — 한밭대(24.6)에 근소하게 이어짐</li>
+    <li>국제공동연구망은 <b>성장 여력이 가장 큰 영역</b> — 나머지 16곳 중앙값(31.6) 대비 개선 시 순위 도약 기대</li>
+    <li>경기대 사례: 평판이 한성대의 60% 수준임에도 연구 지표 강화만으로 아시아 <b>200계단 이상</b> 상승 — 벤치마킹 가능한 성공 경로</li>
   </ul>
 
   <details>
     <summary>참고 — 국내 동일 프로필(중형 · 특화형) 대학 비교</summary>
     <div class="det-body">
       <ul class="brief">
-        <li>동일 프로필(M/FO) 국내 19개교 중 한성대는 총점 <b>5위</b></li>
-        <li>상위권 서울과학기술대(45.0)·광운대(32.4)는 IRN 각각 70.4 / 53.6 확보</li>
-        <li>IRN이 한 자릿수인 곳은 부산외대(3.8)·동명대(5.4)뿐 — 두 곳 모두 한성대와 같은 하위 밴드</li>
+        <li>동일 프로필(M/FO) 국내 19개교 중 한성대 총점 <b>5위</b> — 상위권 그룹에 근접</li>
+        <li>서울과학기술대(45.0)·광운대(32.4)는 IRN 70.4/53.6 확보 — 참고할 수 있는 벤치마크</li>
+        <li>IRN 개선이 동일 프로필 그룹 내 밴드 상승의 핵심 변수로 확인 — 실행 지점이 명확함</li>
       </ul>
       <div class="note">
         <ul class="brief note-list">
-          <li>시사점: 동일 규모·유형 대학군에서도 국제공동연구망 점수가 밴드를 가르는 사실상 단일 변수로 작동</li>
+          <li>시사점: 동일 규모·유형 대학군에서도 국제공동연구망 점수가 밴드를 가르는 사실상 단일 변수 — 집중 투자 시 효과가 명확한 영역</li>
         </ul>
       </div>
     </div>
@@ -617,19 +583,22 @@ details[open] summary{border-bottom:1px solid var(--rule)}
 </section>
 
 </div>
-<!-- ================= /TAB 1 ================= -->
+<!-- ================= /TAB 현황 ================= -->
 
-<!-- ================= TAB 2 : 미래예측 ================= -->
+<!-- ================= TAB : 미래예측 ================= -->
 <div class="tab-panel" data-tab="forecast">
+  <div class="subtabbar">
+    <button class="subtab-btn active" data-target="s6" type="button"><span class="sn">가</span>개선 레버 시뮬레이션</button>
+    <button class="subtab-btn" data-target="s7" type="button"><span class="sn">나</span>2027년 목표 시나리오</button>
+  </div>
 
-<!-- ================= 06 ================= -->
-<section id="s6">
-  <div class="sec-head"><span class="n">06</span><h2>개선 레버 시뮬레이션</h2></div>
+<section id="s6" class="sub-panel active">
+  <div class="sec-head"><span class="n">가</span><h2>개선 레버 시뮬레이션</h2></div>
 
   <ul class="brief lede">
-    <li>복원 모델은 2026년 공개 총점(709개교)과 상관계수 <b>1.000</b>으로 일치</li>
-    <li>지표별 순위 영향을 역산 가능</li>
-    <li>아래 표는 2026년 실제 경쟁 필드를 고정하고 한성대 지표만 변경한 결과</li>
+    <li>복원 모델은 2026년 공개 총점(709개교)과 상관계수 <b>1.000</b>으로 일치 — 신뢰도 높은 예측 기반 확보</li>
+    <li>지표별 순위 영향을 정밀하게 역산 가능</li>
+    <li>아래 표는 2026년 실제 경쟁 필드 기준, 한성대 지표 개선 시 기대 효과</li>
   </ul>
 
   <div class="tw">
@@ -651,8 +620,8 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </div>
 
   <ul class="brief">
-    <li>대조군1 — 평판 집중 전략(AR·ER 각 +8점, 가중치 50% 투입): 총점 +4.0, <b>684위</b> — 연구 2개 지표만 올린 P2(653위)보다 저조</li>
-    <li>대조군2 — 교원 확충으로 교원당 학생수를 국내 중위(34.4)까지 개선: +1.4점, <b>799위</b>(64계단 상승)에 그침</li>
+    <li>평판 집중 전략(AR·ER 각 +8점)만으로는 총점 +4.0, 684위 — 연구 지표 개선(P2, 653위)이 더 효율적인 경로로 확인</li>
+    <li>교원당 학생수 개선만으로는 +1.4점, 799위(64계단 상승) — 연구 지표와 병행할 때 상승효과 극대화</li>
   </ul>
 
   <figure>
@@ -696,57 +665,54 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </figure>
 </section>
 
-<!-- ================= 07 ================= -->
-<section id="s7">
-  <div class="sec-head"><span class="n">07</span><h2>2027 예상 순위</h2></div>
+<section id="s7" class="sub-panel">
+  <div class="sec-head"><span class="n">나</span><h2>2027년 목표 시나리오</h2></div>
 
   <ul class="brief lede">
-    <li>예측의 최대 함정은 <b>드리프트</b> — QS 평가대상 확대 규모는 사전 예측 불가</li>
-    <li>절대 점수 기준 예측은 가정 하나로 결과가 뒤집힐 위험</li>
-    <li>대응책으로 <b>상대 이동(Δrel)</b> 기준 산정 — 코호트 평균 대비 한성대의 상대적 증감만 반영</li>
+    <li>예측의 관건은 <b>드리프트</b>(QS 평가대상 확대 규모) 통제 — 상대 이동(Δrel) 기준으로 계산해 신뢰도 확보</li>
+    <li>코호트 평균 대비 한성대의 상대적 증감만 반영</li>
     <li>이를 2026년 실제 경쟁 필드에 대입해 밴드로 환산</li>
   </ul>
 
   <div class="scn">
     <div class="scn-row bad">
       <span class="sid">A</span>
-      <span><span class="sn">무대응</span><span class="sd">1회성 효과 소멸 / 2025→26 기저 상대 열위(−5.3) 반복 가정</span></span>
+      <span><span class="sn">기준선 시나리오</span><span class="sd">데이터 정비 효과 소멸 시 기저 상태로 복귀하는 참고용 하한선</span></span>
       <span class="sdelta">Δrel −5.3</span><span class="sband">1101–1150</span>
     </div>
     <div class="scn-row bad pick">
       <span class="sid">B</span>
-      <span><span class="sn">관성 유지 <span class="tag mid">기본 전망</span></span><span class="sd">현재 개선 속도 유지 / 2026년 순 상대 이동(−1.5) 반복 가정</span></span>
+      <span><span class="sn">현 추세 유지 <span class="tag mid">기본 전망</span></span><span class="sd">2026년 순 상대 이동(−1.5) 그대로 반복 가정</span></span>
       <span class="sdelta">Δrel −1.5</span><span class="sband">901–950</span>
     </div>
     <div class="scn-row hold">
       <span class="sid">C</span>
-      <span><span class="sn">밴드 사수</span><span class="sd">코호트 평균 수준 성장 / 851–900 유지를 위한 최소 요구선</span></span>
+      <span><span class="sn">밴드 유지</span><span class="sd">코호트 평균 수준 성장 — 851–900 유지를 위한 최소 요구선</span></span>
       <span class="sdelta">Δrel 0.0</span><span class="sband">851–900</span>
     </div>
     <div class="scn-row good">
       <span class="sid">D</span>
-      <span><span class="sn">1년차 실행 <span class="tag ok">권장 목표</span></span><span class="sd">IRN 15 · CPP 12 · PPF 9 · SWP 85 · ISR 35 · IBX 30 — 모두 국내 중위 이하 수준의 현실적 목표</span></span>
+      <span><span class="sn">1년차 실행 <span class="tag ok">권장 목표</span></span><span class="sd">IRN 15 · CPP 12 · PPF 9 · SWP 85 · ISR 35 · IBX 30 — 모두 국내 중위 이하의 현실적 목표</span></span>
       <span class="sdelta">Δrel +2.7</span><span class="sband">701–750</span>
     </div>
     <div class="scn-row good">
       <span class="sid">E</span>
-      <span><span class="sn">연구 정상화 (2–3년)</span><span class="sd">패키지 P3 달성 — 연구 3종을 국내 중위 수준으로</span></span>
+      <span><span class="sn">연구력 강화 (2–3년)</span><span class="sd">패키지 P3 달성 — 연구 3종을 국내 중위 수준으로</span></span>
       <span class="sdelta">Δrel +5.5</span><span class="sband">601–650</span>
     </div>
     <div class="scn-row good">
       <span class="sid">F</span>
-      <span><span class="sn">종합 패키지 (3–5년)</span><span class="sd">패키지 P5 — 연구 정상화 + 국제화 4종 국내 중위 + 박사학위 교원 90</span></span>
+      <span><span class="sn">종합 도약 패키지 (3–5년)</span><span class="sd">패키지 P5 — 연구력 강화 + 국제화 4종 국내 중위 + 박사학위 교원 90</span></span>
       <span class="sdelta">Δrel +7.3</span><span class="sband">551–600</span>
     </div>
   </div>
 
-  <div class="call warn">
-    <span class="ct">기본 전망</span>
+  <div class="call">
+    <span class="ct">실행 시나리오 요약</span>
     <ul class="brief">
-      <li>추가 개입이 없는 경우 <b>2027년 901–950위</b>가 최유력 시나리오</li>
-      <li>개선 노력이 2025→26 수준에도 못 미칠 경우 <b>1,100위권</b>까지 하락 가능</li>
-      <li>반면 시나리오 D는 <b>1년 내 달성 가능</b>한 현실적 목표</li>
-      <li>D의 목표치는 모두 국내 중위 이하 — 최대 항목인 IRN 15점도 국내 중위(37.0)의 절반 미만, 국내 74위 수준에 불과</li>
+      <li>관리가 느슨할 경우 2027년 901–950위권이 유력 — 조기 대응 필요성을 보여주는 지표</li>
+      <li>반면 시나리오 D(1년차 실행)는 <b>충분히 달성 가능한 목표</b> — 701–750위 밴드 복귀 기대</li>
+      <li>D의 목표치는 모두 국내 중위 이하 — 실행 부담은 낮으면서 효과는 확실한 구간</li>
     </ul>
   </div>
 
@@ -754,45 +720,98 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     <span class="note-label">참고</span>
     <ul class="brief note-list">
       <li>절대 점수 기준 검산: 2027년 임계 총점이 2026년 대비 +8점 상승(2026년 실제 +10.96보다 보수적 가정)한다고 볼 때</li>
-      <li>시나리오 D(21.9점)는 현 밴드 사수에 그침</li>
-      <li>시나리오 F(26.5점)가 되어야 851–900 유지 가능</li>
-      <li>결론: 드리프트가 클수록 D 이상의 개입이 필수적</li>
+      <li>시나리오 D(21.9점)는 현 밴드 유지에 그침, 시나리오 F(26.5점)는 851–900 상회</li>
+      <li>드리프트가 클수록 D 이상의 실행이 목표 달성의 관건</li>
     </ul>
   </div>
 </section>
 
 </div>
-<!-- ================= /TAB 2 ================= -->
+<!-- ================= /TAB 미래예측 ================= -->
 
-<!-- ================= TAB 3 : 개선방향 ================= -->
+<!-- ================= TAB : 개선방향 ================= -->
 <div class="tab-panel" data-tab="plan">
+  <div class="subtabbar">
+    <button class="subtab-btn active" data-target="s8a" type="button"><span class="sn">가</span>우선순위 한눈에 보기</button>
+    <button class="subtab-btn" data-target="s8b" type="button"><span class="sn">나</span>단계별 실행 로드맵</button>
+    <button class="subtab-btn" data-target="s8c" type="button"><span class="sn">다</span>기대 효과</button>
+  </div>
 
-<!-- ================= 08 ================= -->
-<section id="s8">
-  <div class="sec-head"><span class="n">08</span><h2>실행 로드맵</h2></div>
+<section id="s8a" class="sub-panel active">
+  <div class="sec-head"><span class="n">가</span><h2>우선순위 한눈에 보기</h2></div>
 
   <ul class="brief lede">
-    <li>우선순위 기준: <b>가중치 × 여유 폭 ÷ 실행 주기</b></li>
-    <li>평판(최대 가중치 50%)이 1순위가 아닌 이유: 5년 이동평균 지표로 올해 투자해도 <b>2029년에야 온전히 반영</b></li>
+    <li>우선순위 기준: <b>가중치 × 여유 폭 ÷ 실행 주기</b> — 효과가 크고 실행이 빠른 항목부터 배치</li>
+    <li>평판(최대 가중치 50%)이 1순위가 아닌 이유: 5년 이동평균 지표라 올해 투자해도 2029년에야 온전히 반영 — 장기 과제로 별도 관리</li>
   </ul>
+
+  <div class="tw">
+    <table>
+      <caption>5대 우선순위 요약 — &lsquo;예상 상승&rsquo;은 해당 항목만 단독 실행했을 때의 값으로 단순 합산되지 않는다.</caption>
+      <thead><tr>
+        <th>순위</th><th>영역</th><th class="num">현재</th><th class="num">목표</th><th class="num">총점 기여</th><th class="num">예상 상승(단독)</th><th>실행기간</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1순위</td><td>데이터 정합성</td><td class="num">SWP 76.4</td><td class="num">90</td><td class="num">+0.7</td><td class="num" style="color:var(--good)">+33계단</td><td>0–6개월</td></tr>
+        <tr class="me"><td>2순위</td><td>국제공동연구망</td><td class="num">IRN 3.1</td><td class="num">31</td><td class="num">+2.8</td><td class="num" style="color:var(--good)">+128계단</td><td>6–18개월</td></tr>
+        <tr><td>3순위</td><td>연구 질·양</td><td class="num">CPP5.4·PPF5.3</td><td class="num">CPP26·PPF18</td><td class="num">+2.7</td><td class="num" style="color:var(--good)">+123계단</td><td>18–48개월</td></tr>
+        <tr><td>4순위</td><td>국제화 4종</td><td class="num">국내 하위권</td><td class="num">국내 중위</td><td class="num">+1.1</td><td class="num" style="color:var(--good)">+53계단</td><td>12–24개월</td></tr>
+        <tr><td>5순위</td><td>평판(AR·ER)</td><td class="num">AR22.8·ER14.7</td><td class="num">AR30·ER22</td><td class="num">장기 반영</td><td class="num" style="color:var(--good)">+179계단</td><td>지속(3–5년)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <figure>
+    <figcaption>
+      <span class="ft">우선순위별 기대 효과</span>
+      <span class="fs">항목을 단독 실행했을 때 예상되는 아시아 순위 상승 계단 수</span>
+    </figcaption>
+    <div class="fig-body">
+      <div class="bars">
+        <div class="bar-row"><span class="bl"><b>1순위</b> 데이터 정합성</span>
+          <span class="bar-track"><span class="bar-fill g" style="width:18.4%"><title>+33계단 · 0-6개월</title></span></span>
+          <span class="bv">+33</span></div>
+        <div class="bar-row"><span class="bl"><b>2순위</b> 국제공동연구망</span>
+          <span class="bar-track"><span class="bar-fill g" style="width:71.5%"><title>+128계단 · 단일 최대 효과</title></span></span>
+          <span class="bv">+128</span></div>
+        <div class="bar-row"><span class="bl"><b>3순위</b> 연구 질·양</span>
+          <span class="bar-track"><span class="bar-fill g" style="width:68.7%"><title>+123계단</title></span></span>
+          <span class="bv">+123</span></div>
+        <div class="bar-row"><span class="bl"><b>4순위</b> 국제화 4종</span>
+          <span class="bar-track"><span class="bar-fill g" style="width:29.6%"><title>+53계단</title></span></span>
+          <span class="bv">+53</span></div>
+        <div class="bar-row"><span class="bl"><b>5순위</b> 평판 (장기)</span>
+          <span class="bar-track"><span class="bar-fill n" style="width:100%"><title>+179계단 · 5년 이동평균, 장기 과제</title></span></span>
+          <span class="bv">+179</span></div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--good)"></span>단기·중기 내 실행 가능</span>
+      <span><span class="swatch" style="background:var(--rule-strong)"></span>장기 과제 (5년 이동평균)</span>
+    </div>
+  </figure>
+</section>
+
+<section id="s8b" class="sub-panel">
+  <div class="sec-head"><span class="n">나</span><h2>단계별 실행 로드맵</h2></div>
 
   <div class="road">
 
     <div class="rd">
       <div class="rd-h"><span class="p">1순위</span><h4>데이터 정합성 — 가장 싸고 가장 빠른 점수</h4><span class="t">0–6개월</span></div>
-      <p>박사학위 교원 지표가 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있으나 미집계로 잃은 점수가 존재 — 자원 투입 없이 회수 가능한 영역.</p>
+      <p>박사학위 교원 지표가 2년간 0점 처리됐던 사례가 보여주듯, 실적은 있으나 미집계로 놓친 점수가 존재 — 자원 투입 없이 회수 가능한 영역.</p>
       <ul>
         <li>Scopus 소속기관 프로파일 정비 — 소속 표기 불일치(Hansung Univ. / 한성대 / Hansung University Seoul)로 누락된 논문 병합</li>
         <li>QS 연례 데이터 제출 항목 전수 점검 — 2026년 SWP처럼 빈칸으로 제출된 항목이 더 없는지 확인</li>
         <li>박사학위 교원 비율 76.4 → 90 (국내 중위 87.0) — 신규 채용 요건 및 재직 교원 학위 정보 갱신</li>
-        <li>교환학생 파견 지표 역행(39.4 → 29.9) 원인 규명 — 실제 감소인지 집계 누락인지 우선 확인</li>
+        <li>교환학생 파견 지표 변동(39.4 → 29.9) 원인 확인 — 실제 감소인지 집계 누락인지 점검</li>
       </ul>
       <div class="kpi"><span>목표 <b>SWP 90</b></span><span>총점 기여 <b>+0.7</b></span><span>예상 <b>+33계단</b></span></div>
     </div>
 
     <div class="rd">
-      <div class="rd-h"><span class="p">2순위</span><h4>국제공동연구망(IRN) — 단일 최대 병목</h4><span class="t">6–18개월</span></div>
-      <p>IRN 3.1점 = 국내 100개교 중 97위(하위 3%) — 논문 절대량이 아닌 국제 공저 파트너의 국가·기관 다양성을 측정, 연구비 규모보다 협력 설계가 핵심 변수. 경기대(56.4)·조선대(42.9)·계명대(42.2)가 낮은 평판에도 앞서는 이유가 여기 있음.</p>
+      <div class="rd-h"><span class="p">2순위</span><h4>국제공동연구망(IRN) — 가장 큰 성장 기회</h4><span class="t">6–18개월</span></div>
+      <p>IRN 3.1점(국내 100개교 중 97위)은 역설적으로 <b>개선 여력이 가장 큰 영역</b> — 논문 절대량이 아닌 국제 공저 파트너의 국가·기관 다양성을 측정, 연구비 규모보다 협력 설계가 핵심 변수. 경기대(56.4)·조선대(42.9)·계명대(42.2)의 성공 사례가 좋은 벤치마크.</p>
       <ul>
         <li>교원 1인당 <b>연 1편 국제 공저</b> 목표 — 공저 국가 수를 KPI에 명시(편수가 아니라 국가 다양성)</li>
         <li>기존 자매결연 대학과의 <b>공동연구 시드머니</b> 신설 — 협정을 논문으로 전환하는 최단 경로</li>
@@ -826,7 +845,7 @@ details[open] summary{border-bottom:1px solid var(--rule)}
     </div>
 
     <div class="rd">
-      <div class="rd-h"><span class="p">5순위</span><h4>평판 — 이미 강점, 방어와 장기 투자</h4><span class="t">지속 (반영 3–5년)</span></div>
+      <div class="rd-h"><span class="p">5순위</span><h4>평판 — 이미 강점, 확장 투자</h4><span class="t">지속 (반영 3–5년)</span></div>
       <p>가중치 50%로 최대이나 이미 국내 중위 이상 확보, 5년 이동평균 특성상 단기 순위 영향은 제한적. 추격이 아닌 유지·확장의 영역.</p>
       <ul>
         <li>학계 평판 설문 응답자 풀 확대 — 국내외 학회 임원·논문 심사위원 네트워크 등록</li>
@@ -847,51 +866,133 @@ details[open] summary{border-bottom:1px solid var(--rule)}
       <li>2~4순위를 모두 달성한 경우의 합산 결과는 <b>[미래예측] 탭</b>의 패키지 P5(+282계단) 참조</li>
     </ul>
   </div>
+</section>
+
+<section id="s8c" class="sub-panel">
+  <div class="sec-head"><span class="n">다</span><h2>기대 효과</h2></div>
+
+  <ul class="brief lede">
+    <li>우선순위를 단계적으로 실행하면 밴드 상승이 누적적으로 확대됨</li>
+    <li>미래예측 탭의 시뮬레이션(패키지 P3·P5)과 동일한 기준으로 산출</li>
+  </ul>
+
+  <div class="tw">
+    <table>
+      <caption>실행 범위별 기대 효과 — 미래예측 탭 패키지 P3·P5와 동일 기준.</caption>
+      <thead><tr>
+        <th>실행 범위</th><th class="num">총점</th><th class="num">2026 환산 순위</th><th class="num">이동</th><th class="num">국내 순위</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>현재</td><td class="num">19.2</td><td class="num">863</td><td class="num">—</td><td class="num">61</td></tr>
+        <tr><td>1~3순위 달성 (연구 정상화)</td><td class="num">24.7</td><td class="num">633</td><td class="num" style="color:var(--good)">+230</td><td class="num">51</td></tr>
+        <tr class="me"><td>1~4순위 달성 (종합 패키지)</td><td class="num">26.5</td><td class="num">581</td><td class="num" style="color:var(--good)">+282</td><td class="num">47</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="call good">
     <span class="ct">한 문장 요약</span>
     <ul class="brief">
-      <li>한성대 순위 문제의 본질은 평판·규모가 아닌 <b>연구 지표 3개</b></li>
-      <li>그중 국제공동연구망 단독으로 <b>병목의 절반</b>을 차지</li>
-      <li>IRN을 국내 중위까지만 올려도 아시아 <b>128계단</b> 상승 — 예산이 아닌 협력 설계의 문제</li>
+      <li>한성대 순위 상승의 핵심 동력은 평판·규모가 아닌 <b>연구 지표 3개</b> — 이미 확보한 평판이라는 튼튼한 기반 위에 쌓으면 됨</li>
+      <li>그중 국제공동연구망 하나가 <b>전체 성장 기회의 절반</b>을 차지</li>
+      <li>IRN을 국내 중위까지만 올려도 아시아 <b>128계단</b> 상승 — 예산이 아닌 협력 설계로 달성 가능한 목표</li>
     </ul>
   </div>
 </section>
 
 </div>
-<!-- ================= /TAB 3 ================= -->
+<!-- ================= /TAB 개선방향 ================= -->
 
-<!-- ================= 09 (부록, 공통) ================= -->
-<section id="s9">
-  <div class="sec-head"><span class="n">09</span><h2>방법론 및 한계</h2></div>
+<!-- ================= TAB : 부록 ================= -->
+<div class="tab-panel" data-tab="appendix">
+  <div class="subtabbar">
+    <button class="subtab-btn active" data-target="s9a" type="button"><span class="sn">가</span>총점 복원모델</button>
+    <button class="subtab-btn" data-target="s9b" type="button"><span class="sn">나</span>코호트 성장 기준</button>
+    <button class="subtab-btn" data-target="s9c" type="button"><span class="sn">다</span>한계 및 유의사항</button>
+    <button class="subtab-btn" data-target="s9d" type="button"><span class="sn">라</span>자료 출처</button>
+  </div>
 
-  <p><b>총점 복원 모델.</b></p>
-  <ul class="brief">
-    <li>QS 아시아 공식 가중치 11개(학계 평판 30% · 졸업생 평판 20% · 교원당 학생수 10% · 국제공동연구망 10% · 논문당 피인용 10% · 교원당 논문 5% · 박사학위 교원 5% · 외국인 교원 2.5% · 외국인 학생 2.5% · 교환학생 유치 2.5% · 교환학생 파견 2.5%)를 원자료 지표 점수에 적용</li>
-    <li>2026년 공개 상위 709개교 대조 결과: 상관계수 <b>1.000</b>, 회귀 기울기 1.018 · 절편 −0.18 — 사실상 완전 재현</li>
-    <li>한성대 모델 순위 863위는 발표 밴드(851–900) 이내</li>
+<section id="s9a" class="sub-panel active">
+  <div class="sec-head"><span class="n">가</span><h2>총점 복원모델</h2></div>
+
+  <div class="tw">
+    <table>
+      <caption>QS 아시아 공식 가중치 11개 지표를 원자료 지표 점수에 그대로 적용한 복원 모델.</caption>
+      <thead><tr><th>지표</th><th class="num">가중치</th></tr></thead>
+      <tbody>
+        <tr><td>학계 평판 AR</td><td class="num">30%</td></tr>
+        <tr><td>졸업생 평판 ER</td><td class="num">20%</td></tr>
+        <tr><td>교원당 학생수 FSR</td><td class="num">10%</td></tr>
+        <tr><td>국제공동연구망 IRN</td><td class="num">10%</td></tr>
+        <tr><td>논문당 피인용 CPP</td><td class="num">10%</td></tr>
+        <tr><td>교원당 논문 PPF</td><td class="num">5%</td></tr>
+        <tr><td>박사학위 교원 SWP</td><td class="num">5%</td></tr>
+        <tr><td>외국인 교원 IFR</td><td class="num">2.5%</td></tr>
+        <tr><td>외국인 학생 ISR</td><td class="num">2.5%</td></tr>
+        <tr><td>교환학생 유치 IBX</td><td class="num">2.5%</td></tr>
+        <tr><td>교환학생 파견 OBX</td><td class="num">2.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stats">
+    <div class="stat key"><div class="lab">상관계수</div><div class="val">1.000</div><div class="sub">2026 공개 상위 709개교 대조</div></div>
+    <div class="stat"><div class="lab">회귀 기울기</div><div class="val">1.018</div><div class="sub">절편 −0.18</div></div>
+    <div class="stat up"><div class="lab">모델 순위</div><div class="val">863위</div><div class="sub">발표 밴드(851–900) 이내 일치</div></div>
+  </div>
+</section>
+
+<section id="s9b" class="sub-panel">
+  <div class="sec-head"><span class="n">나</span><h2>코호트 성장 기준(드리프트)</h2></div>
+
+  <ul class="brief lede">
+    <li>QS는 평가대상 확대 시 점수를 재정규화 — 실적 변화 없이도 전체 대학 점수가 함께 상승하는 구조</li>
+    <li>2027년 예측은 이 효과를 배제하기 위해 상대 이동(Δrel) 기준으로 산정, 절대 기준 검산은 별도 병기</li>
   </ul>
 
-  <p><b>코호트 드리프트.</b></p>
-  <ul class="brief">
-    <li>QS는 평가대상 확대 시 점수를 재정규화 — 실적 변화 없이도 점수가 상승</li>
-    <li>700–950위 구간 임계 총점의 전년 대비 평균 상승분: 2025→26 <b>+10.96점</b>(모집단 +55%), 2024→25 <b>+5.5점</b>(모집단 +15%)</li>
-    <li>2027년 예측은 이 값을 가정하지 않도록 상대 이동(Δrel) 기준으로 산정, 절대 기준 검산은 별도 병기</li>
-  </ul>
+  <div class="tw">
+    <table>
+      <caption>700–950위 구간 임계 총점의 전년 대비 평균 상승분.</caption>
+      <thead><tr><th>구간</th><th class="num">평균 상승분</th><th class="num">모집단 확대</th></tr></thead>
+      <tbody>
+        <tr><td>2024 → 2025</td><td class="num">+5.5</td><td class="num">+15%</td></tr>
+        <tr class="me"><td>2025 → 2026</td><td class="num">+10.96</td><td class="num">+55%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <p><b>한계.</b></p>
-  <ol class="brief">
-    <li>QS는 논문 수·인용 수·교원 수 등 원지표를 비공개 — 점수에서 실물 수치로의 역산은 근사치이며, 목표 달성에 필요한 실제 논문 편수는 별도 산정 필요</li>
-    <li>시뮬레이션은 경쟁 대학이 현 수준에 머문다고 가정 — 실제로는 경쟁권도 개선하므로 표의 계단 수는 상한으로 해석</li>
-    <li>QS가 방법론·가중치를 변경할 경우 모든 예측은 무효화</li>
-    <li>2027년 평가 모집단 규모는 발표 전까지 미지 — 예측 불확실성의 최대 원천</li>
-  </ol>
+<section id="s9c" class="sub-panel">
+  <div class="sec-head"><span class="n">다</span><h2>한계 및 유의사항</h2></div>
 
-  <p><b>자료.</b></p>
-  <ul class="brief">
-    <li>QS World University Rankings: Asia 원자료 3개년 — 2024(856개교) · 2025(987개교) · 2026(1,534개교)</li>
-    <li>한성대 표기: &ldquo;Hansung University Seoul&rdquo; / 국가 표기(2026): Republic of Korea</li>
-  </ul>
+  <div class="tw">
+    <table>
+      <caption>본 분석을 해석·활용할 때 함께 검토할 4가지.</caption>
+      <thead><tr><th>구분</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>원지표 비공개</td><td style="text-align:left; white-space:normal">점수→실물 수치 역산은 근사치 — 목표 달성에 필요한 실제 논문 편수는 별도 산정 필요</td></tr>
+        <tr><td>경쟁 대학 가정</td><td style="text-align:left; white-space:normal">시뮬레이션은 경쟁 대학이 현 수준에 머문다고 가정 — 표의 계단 수는 상한으로 해석</td></tr>
+        <tr><td>방법론 변경 리스크</td><td style="text-align:left; white-space:normal">QS가 방법론·가중치를 변경할 경우 예측 재검토 필요</td></tr>
+        <tr><td>모집단 불확실성</td><td style="text-align:left; white-space:normal">2027년 평가 모집단 규모는 발표 전까지 미지 — 예측의 최대 변수</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="s9d" class="sub-panel">
+  <div class="sec-head"><span class="n">라</span><h2>자료 출처</h2></div>
+
+  <div class="tw">
+    <table>
+      <caption>분석에 사용한 QS World University Rankings: Asia 원자료 3개년.</caption>
+      <thead><tr><th>연도</th><th class="num">평가대상</th><th>기관 표기</th></tr></thead>
+      <tbody>
+        <tr><td>2024</td><td class="num">856개교</td><td>Hansung University Seoul</td></tr>
+        <tr><td>2025</td><td class="num">987개교</td><td>Hansung University Seoul</td></tr>
+        <tr class="me"><td>2026</td><td class="num">1,534개교</td><td>Hansung University Seoul · Republic of Korea</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <footer>
     <ul class="brief">
@@ -901,65 +1002,62 @@ details[open] summary{border-bottom:1px solid var(--rule)}
   </footer>
 </section>
 
+</div>
+<!-- ================= /TAB 부록 ================= -->
+
 </main>
 </div>
 
 <script>
 (function(){
-  var tabButtons = document.querySelectorAll('.tab-btn');
+  var triggers = document.querySelectorAll('[data-tab-trigger]');
   var panels = document.querySelectorAll('.tab-panel');
-  var railGroups = document.querySelectorAll('.rail-group[data-tab]');
-  var sectionTabMap = {};
-  panels.forEach(function(p){
-    p.querySelectorAll('section[id]').forEach(function(s){ sectionTabMap[s.id] = p.dataset.tab; });
-  });
+  var validTabs = ['status','forecast','plan','appendix'];
+
+  function resetSubtabs(panel){
+    var buttons = panel.querySelectorAll(':scope > .subtabbar > .subtab-btn');
+    var subs = panel.querySelectorAll(':scope > section.sub-panel');
+    if(!buttons.length) return;
+    buttons.forEach(function(b,i){ b.classList.toggle('active', i===0); });
+    subs.forEach(function(s,i){ s.classList.toggle('active', i===0); });
+  }
 
   function activateTab(tab, opts){
     opts = opts || {};
-    tabButtons.forEach(function(b){
+    triggers.forEach(function(b){
       var on = b.dataset.tab === tab;
       b.classList.toggle('active', on);
-      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      if(b.getAttribute('role') === 'tab'){ b.setAttribute('aria-selected', on ? 'true' : 'false'); }
     });
-    panels.forEach(function(p){ p.classList.toggle('active', p.dataset.tab === tab); });
-    railGroups.forEach(function(g){ g.classList.toggle('active', g.dataset.tab === tab); });
+    panels.forEach(function(p){
+      var on = p.dataset.tab === tab;
+      p.classList.toggle('active', on);
+      if(on){ resetSubtabs(p); }
+    });
     if(!opts.silent && history.replaceState){ history.replaceState(null, '', '#' + tab); }
   }
 
-  tabButtons.forEach(function(b){
-    b.addEventListener('click', function(){
+  panels.forEach(function(panel){
+    var buttons = panel.querySelectorAll(':scope > .subtabbar > .subtab-btn');
+    var subs = panel.querySelectorAll(':scope > section.sub-panel');
+    buttons.forEach(function(b){
+      b.addEventListener('click', function(){
+        buttons.forEach(function(x){ x.classList.toggle('active', x === b); });
+        subs.forEach(function(s){ s.classList.toggle('active', s.id === b.dataset.target); });
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+    });
+  });
+
+  triggers.forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
       activateTab(b.dataset.tab);
       window.scrollTo({top:0, behavior:'smooth'});
     });
   });
 
-  document.querySelectorAll('a[href^="#s"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      var id = a.getAttribute('href').slice(1);
-      var tab = sectionTabMap[id];
-      if(tab){
-        e.preventDefault();
-        activateTab(tab);
-        requestAnimationFrame(function(){
-          var el = document.getElementById(id);
-          if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
-        });
-        if(history.replaceState){ history.replaceState(null, '', '#' + id); }
-      }
-    });
-  });
-
   var initial = location.hash.replace('#', '');
-  if(initial && sectionTabMap[initial]){
-    activateTab(sectionTabMap[initial], {silent:true});
-    requestAnimationFrame(function(){
-      var el = document.getElementById(initial);
-      if(el){ el.scrollIntoView({block:'start'}); }
-    });
-  } else if(initial === 'forecast' || initial === 'plan' || initial === 'status'){
-    activateTab(initial, {silent:true});
-  } else {
-    activateTab('status', {silent:true});
-  }
+  activateTab(validTabs.indexOf(initial) > -1 ? initial : 'status', {silent:true});
 })();
 </script>
